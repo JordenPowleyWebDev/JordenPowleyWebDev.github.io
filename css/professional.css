@@ -1,0 +1,299 @@
+/**
+ * ------------------------------------------------
+ * Jorden Powly GitHub CV
+ * ------------------------------------------------
+ * Stylesheet - Professional
+ * @desc - This is the initial stylesheet that will
+ *         display on the web page. Only contains 
+ *         styling based on a professional scheme.
+ * ------------------------------------------------
+ */
+
+/**
+ * ------------------------------------------------
+ * Scheme Notes
+ * ------------------------------------------------
+ * Fonts:
+ * 'Raleway', sans-serif
+ * 'Ubuntu', sans-serif
+ * ------------------------------------------------
+ * Colors:
+ * Dark Blue        -> #020623
+ * Light Blue       -> #818de3
+ * Red Pink         -> #ff224b
+ * White            -> #fff
+ * ------------------------------------------------
+ */
+
+/**
+ * ------------------------------------------------
+ * Minimal Reset + Basic Elements
+ * ------------------------------------------------
+ */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.hidden{
+    display: none !important;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    background: #020623;
+}
+
+.site_title, .site_sub_title, .section_title, .section_sub_title{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+/**
+ * ------------------------------------------------
+ * Structural Styling
+ * ------------------------------------------------
+ */
+
+#wrapper{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav_aside{
+    width: 200px;
+    min-height: 100vh;
+    display: block;
+    position: fixed;
+}
+
+section{
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+}
+
+.section_title{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.section_description{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+    color: #818de3;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.section_description p{
+    margin-bottom: 10px;
+}
+
+.section_description p:last-of-type{
+    margin-bottom: 0px;
+}
+
+.divider{
+    width: 100%;
+    height: 10px;
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.divider::before{
+    content: "";
+    width: 60%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -moz--transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #ff224b;
+}
+
+.divider::after{
+    content: "";
+    width: 60%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -moz--transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #ff224b;
+}
+
+.half_section{
+    width: 50%;
+    display: block;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.vertical_float{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+.central_float{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button{
+    padding: 15px 50px;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    background: #ff224b;
+    cursor: pointer;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.button:hover{
+    opacity: 0.6;
+}
+
+/**
+ * ------------------------------------------------
+ * Hero Section Styling
+ * ------------------------------------------------
+ */
+
+#hero{
+    max-width: initial;
+    min-height: 100vh;
+}
+
+#hero nav{
+    width: 100%;
+    display: block;
+    position: absolute; 
+    top: 25%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#hero nav div{
+    width: calc(100px * 5);
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero nav div a.nav_item{
+    width: 100px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+
+#hero nav div a.nav_item:hover{
+    color: #ff224b;
+}
+
+#hero nav div a.nav_item span{
+    width: 90px;
+    height: 2px;    
+    display: block;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    background: transparent;
+    transition: all 0.2s ease-in;
+}
+
+#hero nav div a.nav_item:hover span{
+    bottom: -5px;
+    background: #ff224b;
+}
+
+#hero .site_title{
+    color: #818de3;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+#hero .site_sub_title{
+    color: #818de3;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#hero a.button{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
