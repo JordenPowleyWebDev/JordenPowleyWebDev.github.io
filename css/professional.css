@@ -214,8 +214,10 @@ section{
     z-index: 1000;
     display: block;
     position: fixed;
-    top: 40px;
+    top: 50%;
     right: 40px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
