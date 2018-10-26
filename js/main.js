@@ -16,7 +16,7 @@ $(document).ready(function(){
     /**
      * On load functions 
      */
-    $('.nav_item').on('click', function(event){
+    $('a').on('click', function(event){
          event.preventDefault();
          event.stopPropagation();
 
