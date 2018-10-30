@@ -113,6 +113,11 @@ section{
     text-transform: uppercase;
 }
 
+h4.section_title{
+    margin-top: 40px;
+    font-size: 1.6rem;
+}
+
 .section_description{
     width: 100%;
     display: block;
@@ -220,6 +225,22 @@ ul li:last-of-type{
     opacity: 0.6;
 }
 
+.image_container{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.image_container img{
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width: 600px){
     .divider::before, .divider::after{
         width: 90%;
@@ -228,7 +249,7 @@ ul li:last-of-type{
 
 /**
  * ------------------------------------------------
- * Hamburger Styling
+ * Hamburger Styling + Mail Icon Styling
  * ------------------------------------------------
  */
 
@@ -330,6 +351,33 @@ ul li:last-of-type{
     -moz-transform: rotate(-135deg) translate(-0%, -0%);
     -o-transform: rotate(-135deg) translate(-0%, -0%);
     transform: rotate(-135deg) translate(-0%, -0%);
+}
+
+#mail_icon{
+    width: 25px;
+    height: 20px;
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: 40px;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#mail_icon .fa-envelope{
+    color: #ff224b;
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+#mail_icon.invisible{
+    opacity: 0;
+    pointer-events: none;
 }
 
 /**

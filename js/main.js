@@ -40,6 +40,7 @@ $(document).ready(function(){
      */
     $(window).on("scroll", function(event){
         hamburgerVisible();
+        mailVisible();
     });
 
 });
@@ -75,6 +76,22 @@ function hamburgerVisible(){
         $('#hamburger_icon').addClass('invisible');
     }
 } // END hamburgerVisible()
+
+/**
+ * mailVisible()
+ * @desc - Uses the current windows position to detect if the mail 
+ *         icon should be displayed or not
+ */
+function mailVisible() {
+    // Check if hero section is out of view
+    if (!elementInViewport($('#hero'))) {
+        // Display the mail icon
+        $('#mail_icon').removeClass('invisible');
+    } else {
+        // Hide the mail icon
+        $('#mail_icon').addClass('invisible');
+    }
+} // END mailVisible()
 
 /**
  * hamburgerFunction()
