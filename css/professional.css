@@ -64,6 +64,20 @@ body{
     background: #ff224b;
 }
 
+a, a:active, a:visited{
+    color: #818de3;
+    font-style: italic;
+}
+
+ul{
+    list-style-position: inside;
+    list-style: none;
+}
+
+.far{
+    color: #fff;
+}
+
 /**
  * ------------------------------------------------
  * Structural Styling
@@ -109,11 +123,20 @@ section{
     text-align: left;
 }
 
-.section_description p{
+.section_description p, .section_description ul{
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .section_description p:last-of-type{
+    margin-bottom: 0px;
+}
+
+ul li{
+    margin-bottom: 4px;
+}
+
+ul li:last-of-type{
     margin-bottom: 0px;
 }
 
@@ -126,32 +149,26 @@ section{
     margin-bottom: 50px;
 }
 
-.divider::before{
+.divider::before, .divider::after{
     content: "";
-    width: 60%;
+    width: 100%;
+    max-width: 1000px;
     height: 2px;
     display: block;
     position: absolute;
     top: 0;
     left: 50%;
-    -moz--transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    -moz-transform: translateX(-50%) rotate(-2deg);
+    -webkit-transform: translateX(-50%) rotate(-2deg);
+    transform: translateX(-50%) rotate(-2deg);
     background: #ff224b;
 }
 
 .divider::after{
-    content: "";
-    width: 60%;
-    height: 2px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -moz--transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background: #ff224b;
+    -moz-transform: translateX(-50%) rotate(2deg);
+    -webkit-transform: translateX(-50%) rotate(2deg);
+    transform: translateX(-50%) rotate(2deg);
 }
 
 .half_section{
@@ -182,11 +199,12 @@ section{
     transform: translate(-50%, -50%);
 }
 
-.button{
+.button, .button:active, .button:visited{
     padding: 15px 50px;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
     font-size: 0.8rem;
+    font-style: normal;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
@@ -202,6 +220,12 @@ section{
     opacity: 0.6;
 }
 
+@media screen and (max-width: 600px){
+    .divider::before, .divider::after{
+        width: 90%;
+    }
+}
+
 /**
  * ------------------------------------------------
  * Hamburger Styling
@@ -214,20 +238,14 @@ section{
     z-index: 1000;
     display: block;
     position: fixed;
-    top: 50%;
+    top: 40px;
     right: 40px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
     opacity: 1;
-}
-
-#hamburger_icon.open{
-    top: -40px;
 }
 
 #hamburger_icon.invisible{
