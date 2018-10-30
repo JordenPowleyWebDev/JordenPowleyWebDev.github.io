@@ -74,7 +74,7 @@ ul{
     list-style: none;
 }
 
-.far{
+.far, .fas{
     color: #fff;
 }
 
@@ -129,7 +129,7 @@ h4.section_title{
 }
 
 .section_description p, .section_description ul{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
@@ -138,7 +138,7 @@ h4.section_title{
 }
 
 ul li{
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 ul li:last-of-type{
@@ -164,16 +164,16 @@ ul li:last-of-type{
     top: 0;
     left: 50%;
     transform-origin: 50% 50%;
-    -moz-transform: translateX(-50%) rotate(-2deg);
-    -webkit-transform: translateX(-50%) rotate(-2deg);
-    transform: translateX(-50%) rotate(-2deg);
+    -moz-transform: translateX(-50%) rotate(-1deg);
+    -webkit-transform: translateX(-50%) rotate(-1deg);
+    transform: translateX(-50%) rotate(-1deg);
     background: #ff224b;
 }
 
 .divider::after{
-    -moz-transform: translateX(-50%) rotate(2deg);
-    -webkit-transform: translateX(-50%) rotate(2deg);
-    transform: translateX(-50%) rotate(2deg);
+    -moz-transform: translateX(-50%) rotate(1deg);
+    -webkit-transform: translateX(-50%) rotate(1deg);
+    transform: translateX(-50%) rotate(1deg);
 }
 
 .half_section{
@@ -242,6 +242,10 @@ ul li:last-of-type{
 }
 
 @media screen and (max-width: 600px){
+    section{
+        min-height: 100vh;
+    }
+
     .divider::before, .divider::after{
         width: 90%;
     }
@@ -587,4 +591,25 @@ ul li:last-of-type{
 
 #introduction{
     margin-top: 50px;
+}
+
+
+/**
+ * ------------------------------------------------
+ * Contact Section Styling
+ * ------------------------------------------------
+ */
+
+.fa-envelope, .fa-mobile-alt{
+    width: 25px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#contact .section_description p:first-child{
+    margin-bottom: 40px;
+}
+
+#contact .section_description{
+    margin-bottom: 80px;
 }

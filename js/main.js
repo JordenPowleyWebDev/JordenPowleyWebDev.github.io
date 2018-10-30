@@ -17,10 +17,10 @@ $(document).ready(function(){
      * On load functions 
      */
     $('a').on('click', function(event){
-         event.preventDefault();
-         event.stopPropagation();
+        event.preventDefault();
+        event.stopPropagation();
 
-         navTraverse($(this));
+        navTraverse($(this));
      });
     
     /**
@@ -55,6 +55,10 @@ function navTraverse($navItem){
     // Pull the required information from the nav item
     var target = $navItem.attr('href');
     
+    // Remove the hash from the href -> Spoof page visit
+    var name = $navItem.data('title');
+    changeAnalyticPage(name, name);
+
     // Traverse to the location
     $([document.documentElement, document.body]).animate({
         scrollTop: $(target).offset().top
