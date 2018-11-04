@@ -35,6 +35,14 @@ $(document).ready(function(){
         hamburgerFunction();
     });
 
+    // Detect click on email symbol
+    $('#email_icon').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        emailFunction();
+    });
+
     // Prevent nar bar click through
     $('.navigation_icons').on('click', function (event) {
         event.preventDefault();
@@ -66,7 +74,10 @@ function navTraverse($navItem){
 
     // Traverse to the location
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(target).offset().top
+        scrollTop: $(target).offset().top,
+        complete: function () {
+            return true;
+        }
     }, 1000);
 } // END navTraverse()
 
@@ -109,3 +120,27 @@ function hamburgerFunction(){
         }
     });
 } // END hamburgerFunction()
+
+/**
+ * emailFunction()
+ * @desc - Executes the email functionality
+ *       - Traverse to the top of the page
+ *       - If already traversing -> cancel
+ */
+function emailFunction() {
+    // Check for class on the hamburger menu
+    $('#email_icon').addClass('open');
+
+    // Scroll to the top
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $($('#contact')).offset().top,
+        complete: function () {
+            $('#email_icon').removeClass('open');
+        }
+    }, {
+            duration: 1000,
+            complete: function () {
+                $('#email_icon').removeClass('open');
+            }
+        });
+} // END emailFunction()
