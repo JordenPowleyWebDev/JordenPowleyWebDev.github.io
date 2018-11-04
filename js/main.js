@@ -35,12 +35,17 @@ $(document).ready(function(){
         hamburgerFunction();
     });
 
+    // Prevent nar bar click through
+    $('.navigation_icons').on('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+    });
+
     /**
      * Scroll Event Listeners
      */
     $(window).on("scroll", function(event){
-        hamburgerVisible();
-        mailVisible();
+        navbarVisible();
     });
 
 });
@@ -66,36 +71,20 @@ function navTraverse($navItem){
 } // END navTraverse()
 
 /**
- * hamburgerVisible()
- * @desc - Uses the current windows position to detect if the hamburger
- *         icon should be displayed or not
+ * navbarVisible()
+ * @desc - Uses the current windows position to detect if the nav menu
+ *         should be displayed or not
  */
-function hamburgerVisible(){
+function navbarVisible(){
     // Check if hero section is out of view
     if(!elementInViewport($('#hero'))){
-        // Display the hamburger menu
-        $('#hamburger_icon').removeClass('invisible');
+        // Display the nav menu
+        $('.navigation_icons').removeClass('invisible');
     } else{
-        // Hide the hamburger menu
-        $('#hamburger_icon').addClass('invisible');
+        // Hide the nav menu
+        $('.navigation_icons').addClass('invisible');
     }
-} // END hamburgerVisible()
-
-/**
- * mailVisible()
- * @desc - Uses the current windows position to detect if the mail 
- *         icon should be displayed or not
- */
-function mailVisible() {
-    // Check if hero section is out of view
-    if (!elementInViewport($('#hero'))) {
-        // Display the mail icon
-        $('#mail_icon').removeClass('invisible');
-    } else {
-        // Hide the mail icon
-        $('#mail_icon').addClass('invisible');
-    }
-} // END mailVisible()
+} // END navbarVisible()
 
 /**
  * hamburgerFunction()

@@ -267,13 +267,48 @@ ul li:last-of-type{
  * ------------------------------------------------
  */
 
-#hamburger_icon{
-    width: 25px;
-    height: 20px;
+.navigation_icons{
+    width: 100%;
+    height: 60px;
     z-index: 1000;
     display: block;
     position: fixed;
-    top: 40px;
+    top: 0px;
+    left: 0px;
+    background: #ff224b;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    opacity: 1;
+}
+
+.navigation_icons.invisible{
+    opacity: 0;
+        pointer-events: none;
+}
+
+.nav_title{
+    width: auto;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    color: #020623;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+
+#hamburger_icon{
+    width: 25px;
+    height: 20px;
+    display: block;
+    position: fixed;
+    top: 20px;
     right: 40px;
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
@@ -293,7 +328,7 @@ ul li:last-of-type{
     position: absolute;
     height: 3px;
     width: 100%;
-    background: #ff224b;
+    background: #020623;
     opacity: 1;
     left: 0;
     transform-origin: center;
@@ -370,11 +405,10 @@ ul li:last-of-type{
 #mail_icon{
     width: 25px;
     height: 20px;
-    z-index: 1000;
     display: block;
     position: fixed;
-    top: 80px;
-    right: 40px;
+    top: 17px;
+    right: 90px;
     -webkit-transition: .5s ease-in-out;
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
@@ -384,8 +418,8 @@ ul li:last-of-type{
 }
 
 #mail_icon .fa-envelope{
-    color: #ff224b;
-    font-size: 1.6rem;
+    color: #020623;
+    font-size: 1.7rem;
     font-weight: lighter;
 }
 
