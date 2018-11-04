@@ -141,10 +141,27 @@ h4.section_title{
 
 ul li{
     margin-bottom: 8px;
+    position: relative;
 }
 
 ul li:last-of-type{
     margin-bottom: 0px;
+}
+
+ul li i{
+    width: 20px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+ul li span{
+    width: calc(100% - 30px);
+    display: block;
+    position: relative;
+    float: right;
 }
 
 .divider{
@@ -250,6 +267,10 @@ ul li:last-of-type{
     position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+
+.symbol_link{
+    white-space: nowrap;
 }
 
 @media screen and (max-width: 600px){
