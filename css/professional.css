@@ -263,7 +263,7 @@ ul li span{
     left: 150%;
 }
 
-.button:hover::before, .button:hover::after{
+.button:hover::before, .button:hover::after, .button:focus::before, .button:focus::after{
     /* opacity: 0.6; */
     left: 0%;
 }
