@@ -225,6 +225,7 @@ ul li span{
 
 .button, .button:active, .button:visited{
     width: 175px;
+    z-index: 1;
     padding: 15px 50px;
     color: #fff;
     font-family: 'Ubuntu', sans-serif;
@@ -234,15 +235,37 @@ ul li span{
     text-decoration: none;
     text-align: center;
     letter-spacing: 2px;
-    background: #ff224b;
+    border: 2px solid #ff224b;
     cursor: pointer;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    overflow: hidden;
+}
+
+.button::before, .button::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: -200%;
+    left: -150%;
+    transform: rotate(25deg);
+    background: #ff224b;
     -moz-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
-.button:hover{
-    opacity: 0.6;
+.button::after{
+    left: 150%;
+}
+
+.button:hover::before, .button:hover::after{
+    /* opacity: 0.6; */
+    left: 0%;
 }
 
 .section_description .button{
