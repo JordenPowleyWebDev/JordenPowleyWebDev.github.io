@@ -786,3 +786,7 @@ ul li span{
 #contact .section_description{
     margin-bottom: 80px;
 }
+
+#contact .section_description a{
+    font-size: 14px;
+}
