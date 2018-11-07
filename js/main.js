@@ -16,7 +16,7 @@ $(document).ready(function(){
     /**
      * On load functions 
      */
-    $('a').on('click', function(event){
+    $('a.nav_animation').on('click', function(event){
         event.preventDefault();
         event.stopPropagation();
 
