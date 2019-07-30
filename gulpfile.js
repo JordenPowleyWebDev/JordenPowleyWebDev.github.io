@@ -35,6 +35,7 @@ const scssInputFiles = [
  * @type {string[]}
  */
 const jsInputFiles = [
+    './node_modules/jquery/dist/jquery.min.js',
     "./assets/js/app.js",
     "./assets/js/app/*.js",
 ];
