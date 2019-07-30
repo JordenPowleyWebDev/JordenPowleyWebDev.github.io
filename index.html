@@ -23,30 +23,75 @@
     <link rel="stylesheet" href="/public/css/style.min.css">
 
     <!-- Import Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/public/media/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/public/media/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/public/media/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/public/media/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/public/media/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/public/media/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/public/media/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/public/media/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/media/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/public/media/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/media/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/public/media/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/media/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/public/images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/public/images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/public/images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/public/images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/public/images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/public/images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/public/images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/public/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/public/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/public/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/public/images/icons/favicon-16x16.png">
     <link rel="manifest" href="/data/manifest.json">
     <meta name="msapplication-TileColor" content="#020623">
     <meta name="msapplication-TileImage" content="/public/media/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#020623">
 
     <!-- Import any javascript for functionality -->
-    <script src="//www.google-analytics.com/analytics.js"></script>
-    <script src="/public/js/app.min.js"></script>
+    <!--<script src="//www.google-analytics.com/analytics.js"></script>-->
+    <!--<script src="/public/js/app.min.js"></script>-->
 </head>
 
 <body>
+    <!--
+     -- Statuses:
+     -- [none]      - Header Visible
+     -- invisible   - Header Hidden
+     -->
+    <header id="header" class="invisible">
+        <div class="nav_title">Jorden Powley</div>
+        <div id="hamburger_icon" class="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="email_icon" href="#contact" class="" data-title="contact">
+            <span class="top_line"></span>
+            <span class="bottom_line"></span>
+            <span class="left_line"></span>
+            <span class="right_line"></span>
+            <span class="left_env_line"></span>
+            <span class="right_env_line"></span>
+        </div>
+    </header>
+    <div id="wrapper">
+        <section id="homepage">
+            <nav>
+                <div>
+                    <a href="#current_experience" class="nav_item nav_animation" data-title="current-experience">Current<span></span></a>
+                    <a href="#future_experience" class="nav_item nav_animation" data-title="future-experience">Future<span></span></a>
+                    <a href="#hiring" class="nav_item nav_animation" data-title="hire">For Hire<span></span></a>
+                    <a href="#contact" class="nav_item nav_animation" data-title="contact">Contact<span></span></a>
+                    <div class="clearfix"></div>
+                </div>
+            </nav>
+            <div class="central_float">
+                <h1 class="site_title">Jorden Powley</h1>
+                <h2 class="site_sub_title">Web Developer</h2>
+            </div>
+            <div class="button_container">
+                <a href="#introduction" class="button nav_animation" data-title="about">About</a>
+                <a href="/media/jorden_powley_2018.pdf" class="button" target="_blank">VIEW CV</a>
+                <div class="clearfix"></div>
+            </div>
+        </section>
+    </div>
+    <footer id="footer">
 
+    </footer>
 </body>
 </html>

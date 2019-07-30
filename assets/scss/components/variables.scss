@@ -15,8 +15,24 @@ $medium: 1024px;
 $large: 1600px;
 $extraLarge: 1920px;
 
-/**
+/*
+ * Color Variables
+ */
+
+$darkBlue: #020623;
+$lightBlue: #818de3;
+$redPink: #ff224b;
+$white: #fff;
+
+/*
  * Base Variables
  */
 
 $baseFontSize: 16px;
+
+/*
+ * Fonts
+ */
+
+$raleway: 'Raleway', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;

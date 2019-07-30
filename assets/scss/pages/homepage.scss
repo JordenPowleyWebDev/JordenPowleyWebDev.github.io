@@ -1,0 +1,22 @@
+/*
+ * ------------------------------------------------
+ *
+ * Homepage Styling
+ *
+ * ------------------------------------------------
+ */
+
+@import '../components/variables.scss';
+@import '../components/mixins.scss';
+
+section#homepage {
+  background: linear-gradient(270deg, #626cb0, #020623);
+  background-size: 400% 400%;
+  animation: HeroAnimation 30s ease infinite;
+
+  @keyframes HeroAnimation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+}

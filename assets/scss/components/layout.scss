@@ -8,3 +8,29 @@
 
 @import 'variables.scss';
 @import 'mixins.scss';
+
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+#wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+}
