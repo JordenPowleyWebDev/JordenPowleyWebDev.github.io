@@ -8,3 +8,40 @@
 
 @import 'variables.scss';
 @import 'mixins.scss';
+
+.site_title,
+.site_sub_title,
+.section_title,
+.section_sub_title {
+  font-family: $ubuntu;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+::selection {
+  color: $white;
+  background: $redPink;
+}
+
+.text {
+  font-family: $raleway;
+  font-weight: normal;
+}
+
+a,
+a:active,
+a:visited {
+  color: $white;
+  font-style: normal;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none inside none;
+}
+
+.far,
+.fas {
+  color: $white;
+}

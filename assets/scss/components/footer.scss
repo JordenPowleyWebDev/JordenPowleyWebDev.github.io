@@ -6,6 +6,72 @@
  * ------------------------------------------------
  */
 
-footer#footer {
+@import 'variables.scss';
+@import 'mixins.scss';
 
+footer#footer {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: 40px 60px;
+  background: $redPink;
+
+  .upper_footer {
+    margin-bottom: 40px;
+
+    h4.section_sub_title {
+      display: block;
+      position: relative;
+      margin-bottom: 40px;
+      color: $white;
+      font-size: 20px;
+    }
+
+    a,
+    a:active,
+    a:visited {
+      width: 100%;
+      display: block;
+      position: relative;
+      margin-bottom: 20px;
+      color: $white;
+      font-family: $raleway;
+      font-size: 18px;
+      font-weight: normal;
+      text-decoration: none;
+
+      i {
+        width: 30px;
+        height: 20px;
+        display: block;
+        position: relative;
+        float: left;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 20px;
+      }
+
+      span {
+        width: calc(100% - 40px);
+        height: 20px;
+        display: block;
+        position: relative;
+        float: left;
+        text-align: left;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .lower_footer {
+    padding-top: 40px;
+    border-top: 1px solid $white;
+
+    .section_sub_title {
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
 }
