@@ -59,10 +59,48 @@
         /**
          * navTraverse()
          *
-         * Scrolls to the target location
+         * Loads in a new page
+         *
+         * @param {Object} $element    - Element to be calculated
          */
-        function navTraverse () {
+        function navTraverse ($element) {
+            // Pull the data from the nav item
+            var location = "/content" + $element.attr('href') + ".html";
+            var route = $element.data('route');
 
+            // Cover the wrapper
+            $('#main_nav_container').addClass('transition');
+
+            // Fade out the other nav items
+            $element.addClass('main');
+            $('#main_nav_container .nav_item:not(.main)').addClass('fade');
+
+            // Ajax in the file
+            $.ajax({
+                url: location,
+                complete: function (data) {
+                    setTimeout(function () {
+                        // Change the page address
+                        window.history.pushState("", "", route);
+
+                        // Clear out the wrapper and load in the new page
+                        $('#wrapper').html(data.responseText);
+
+
+                        setTimeout(function () {
+                            // Close the main nav
+                            closeMainNav();
+                        }, 1000);
+
+                        setTimeout(function () {
+                            // Remove transition classes
+                            $('#main_nav_container').removeClass('transition');
+                            $('#main_nav_container .nav_item').removeClass('fade');
+                            $('#main_nav_container .nav_item').removeClass('main');
+                        }, 1500);
+                    }, 500);
+                }
+            });
         } // END navTraverse()
 
         /**
@@ -172,6 +210,14 @@
             event.stopPropagation();
 
             emailFunction();
+        });
+
+        // Detect click on a nav link
+        $('.nav_item').on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            navTraverse($(this));
         });
 
         /**

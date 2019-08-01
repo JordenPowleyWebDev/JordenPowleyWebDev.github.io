@@ -11,4 +11,18 @@
 
 section#homepage {
   position: fixed;
+
+  h1 {
+    color: $white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    color: $white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
 }
