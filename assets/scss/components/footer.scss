@@ -13,8 +13,13 @@ footer#footer {
   width: 100%;
   display: block;
   position: relative;
-  padding: 40px 60px;
+  padding: 60px;
   background: $redPink;
+  transition: 0.2s ease-in;
+
+  &.transparent {
+    opacity: 0;
+  }
 
   .upper_footer {
     margin-bottom: 40px;

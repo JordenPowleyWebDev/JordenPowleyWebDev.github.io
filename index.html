@@ -52,14 +52,22 @@
      -- [none]      - Header Visible
      -- invisible   - Header Hidden
      -->
-    <header id="header" class="invisible">
-        <div class="nav_title">Jorden Powley</div>
-        <div id="hamburger_icon" class="">
+    <header id="header" >
+        <div id="main_nav_container">
+            <nav id="main_nav">
+                <a href="/home" class="nav_item site_sub_title">Home</a>
+                <a href="/about" class="nav_item site_sub_title">About</a>
+                <a href="/projects" class="nav_item site_sub_title">Projects</a>
+                <a href="/work" class="nav_item site_sub_title">Work</a>
+                <a href="/qualifications" class="nav_item site_sub_title">Qualifications</a>
+            </nav>
+        </div>
+        <div id="hamburger_icon" class="red_pink">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <div id="email_icon" href="#contact" class="" data-title="contact">
+        <div id="email_icon" href="#contact" class="red_pink" data-title="contact">
             <span class="top_line"></span>
             <span class="bottom_line"></span>
             <span class="left_line"></span>
@@ -70,22 +78,9 @@
     </header>
     <div id="wrapper">
         <section id="homepage" class="container flex central">
-            <!--<nav>-->
-                <!--<div class="clearfix">-->
-                    <!--<a href="#current_experience" class="nav_item nav_animation" data-title="current-experience">Current<span></span></a>-->
-                    <!--<a href="#future_experience" class="nav_item nav_animation" data-title="future-experience">Future<span></span></a>-->
-                    <!--<a href="#hiring" class="nav_item nav_animation" data-title="hire">For Hire<span></span></a>-->
-                    <!--<a href="#contact" class="nav_item nav_animation" data-title="contact">Contact<span></span></a>-->
-                <!--</div>-->
-            <!--</nav>-->
             <div class="central_float">
                 <h1 class="site_title">Jorden Powley</h1>
                 <h2 class="site_sub_title">Web Developer</h2>
-            </div>
-            <div class="button_container">
-                <a href="#introduction" class="button nav_animation" data-title="about">About</a>
-                <a href="/media/jorden_powley_2018.pdf" class="button" target="_blank">VIEW CV</a>
-                <div class="clearfix"></div>
             </div>
         </section>
     </div>
@@ -105,5 +100,8 @@
             <div class="section_sub_title">&copy; Jorden Powley - 2019</div>
          </div>
     </footer>
+
+    <script src="/public/js/app.min.js"></script>
 </body>
+
 </html>
