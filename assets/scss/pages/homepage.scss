@@ -12,17 +12,34 @@
 section#homepage {
   position: fixed;
 
-  h1 {
-    color: $white;
-    font-size: 4rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
+  .central_float {
+    width: 100%;
+    padding: 60px;
 
-  h2 {
-    color: $white;
-    font-size: 3rem;
-    text-transform: uppercase;
-    text-align: center;
+    @include breakpoint (sm) {
+      padding: 40px;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 50px;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include breakpoint (sm) {
+        font-size: 40px;
+      }
+    }
+
+    h2 {
+      color: $white;
+      font-size: 40px;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include breakpoint (sm) {
+        font-size: 30px;
+      }
+    }
   }
 }

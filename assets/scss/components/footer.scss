@@ -17,6 +17,10 @@ footer#footer {
   background: $redPink;
   transition: 0.2s ease-in;
 
+  @include breakpoint (sm) {
+    padding: 40px;
+  }
+
   &.transparent {
     opacity: 0;
   }

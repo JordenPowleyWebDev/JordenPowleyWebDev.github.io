@@ -123,6 +123,9 @@
 
             // Adjust main nav classes
             $('#main_nav_container').addClass('open');
+
+            // Prevent body scrolling
+            $('body').addClass('no-scroll');
         } // END openMainNav()
 
         /**
@@ -145,6 +148,9 @@
 
             // Adjust main nav classes
             $('#main_nav_container').removeClass('open');
+
+            // Allow body scrolling
+            $('body').removeClass('no-scroll');
         } // END closeMainNav()
 
         /**
