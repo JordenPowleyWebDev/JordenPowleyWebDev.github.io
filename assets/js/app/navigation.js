@@ -39,22 +39,22 @@
             return elementBottom > viewportTop && elementTop < viewportBottom;
         } // END elementInViewport()
 
-        /**
-         * navbarVisible()
-         *
-         * Uses the current windows position to detect if the nav menu
-         * should be displayed or not
-         */
-        function navbarVisible (){
-            // Check if hero section is out of view
-            if(!elementInViewport($('#hero'))){
-                // Display the nav menu
-                $('.navigation_icons').removeClass('invisible');
-            } else{
-                // Hide the nav menu
-                $('.navigation_icons').addClass('invisible');
-            }
-        } // END navbarVisible()
+        // /**
+        //  * navbarVisible()
+        //  *
+        //  * Uses the current windows position to detect if the nav menu
+        //  * should be displayed or not
+        //  */
+        // function navbarVisible (){
+        //     // Check if hero section is out of view
+        //     if(!elementInViewport($('#hero'))){
+        //         // Display the nav menu
+        //         $('.navigation_icons').removeClass('invisible');
+        //     } else{
+        //         // Hide the nav menu
+        //         $('.navigation_icons').addClass('invisible');
+        //     }
+        // } // END navbarVisible()
 
         /**
          * navTraverse()
@@ -83,9 +83,11 @@
                         // Change the page address
                         window.history.pushState("", "", route);
 
+                        // Scroll to the top of the page
+                        window.scrollTo(0, 0);
+
                         // Clear out the wrapper and load in the new page
                         $('#wrapper').html(data.responseText);
-
 
                         setTimeout(function () {
                             // Close the main nav

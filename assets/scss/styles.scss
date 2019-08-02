@@ -12,8 +12,13 @@
 @import 'components/base.scss';
 @import 'components/typography.scss';
 @import 'components/layout.scss';
+@import 'components/buttons.scss';
+@import 'components/images.scss';
 @import 'components/header.scss';
 @import 'components/footer.scss';
 
 // Import Styling Pages
-@import 'pages/homepage.scss';
+@import 'pages/home-page.scss';
+@import 'pages/about-page.scss';
+@import 'pages/work-page.scss';
+@import 'pages/projects-page.scss';

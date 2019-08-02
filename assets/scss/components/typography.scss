@@ -9,10 +9,8 @@
 @import 'variables.scss';
 @import 'mixins.scss';
 
-.site_title,
-.site_sub_title,
-.section_title,
-.section_sub_title {
+.title,
+.sub_title {
   font-family: $ubuntu;
   font-weight: 300;
   text-transform: uppercase;
@@ -24,9 +22,12 @@
   background: $redPink;
 }
 
+p,
 .text {
   font-family: $raleway;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
 }
 
 a,
@@ -36,6 +37,8 @@ a:visited {
   font-style: normal;
   text-decoration: none;
   transition: 0.2s ease-in;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0);
 
   &:hover {
     opacity: 0.6;
@@ -50,3 +53,13 @@ ul {
 .fas {
   color: $white;
 }
+
+.white_text {color: $white;}
+.red_pink_text {color: $redPink;}
+.dark_blue_text {color: $darkBlue;}
+.light_blue_text {color: $lightBlue;}
+
+.extra_large_text {font-size: 40px;}
+.large_text {font-size: 30px;}
+.medium_text {font-size: 18px;}
+.small_text {font-size: 16px;}

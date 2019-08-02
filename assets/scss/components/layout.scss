@@ -21,6 +21,16 @@
   display: none !important;
 }
 
+.white_background {background-color: $white;}
+.red_pink_background {background-color: $redPink;}
+.dark_blue_background {background-color: $darkBlue;}
+.light_blue_background {background-color: $lightBlue;}
+
+.white_border {border-color: $white;}
+.red_pink_border {border-color: $redPink;}
+.dark_blue_border {border-color: $darkBlue;}
+.light_blue_border {border-color: $lightBlue;}
+
 #wrapper {
   width: 100%;
   min-height: 100vh;
@@ -37,7 +47,11 @@ section {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding: 80px 40px 40px;
+  padding: 60px;
+
+  @include breakpoint (sm) {
+    padding: 40px;
+  }
 }
 
 .container {
@@ -51,7 +65,7 @@ section {
     &.central {
       flex-direction: row;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       align-content: center;
     }
 
@@ -59,6 +73,10 @@ section {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
+    }
+
+    &.vertical_stretch {
+      justify-content: stretch;
     }
   }
 }
@@ -76,6 +94,10 @@ section {
   &.right_section {
     float: right;
   }
+
+  &.no_float {
+    float: unset;
+  }
 }
 
 .central_float {
@@ -84,4 +106,33 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.inner {
+  width: 100%;
+  display: block;
+  position: relative;
+  padding: 0 60px;
+
+  @include breakpoint (sm) {
+    padding: 0 40px;
+  }
+}
+
+.block {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.title {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+p,
+.text {
+  margin-bottom: 10px;
 }

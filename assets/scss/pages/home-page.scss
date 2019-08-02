@@ -9,19 +9,14 @@
 @import '../components/variables.scss';
 @import '../components/mixins.scss';
 
-section#homepage {
+section#home-page {
   position: fixed;
 
   .central_float {
     width: 100%;
-    padding: 60px;
-
-    @include breakpoint (sm) {
-      padding: 40px;
-    }
 
     h1 {
-      color: $white;
+      margin-bottom: 0;
       font-size: 50px;
       text-transform: uppercase;
       text-align: center;
@@ -32,7 +27,6 @@ section#homepage {
     }
 
     h2 {
-      color: $white;
       font-size: 40px;
       text-transform: uppercase;
       text-align: center;
