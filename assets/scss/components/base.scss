@@ -25,15 +25,15 @@ html {
 }
 
 body {
-  position: relative;
-  overflow-x: hidden;
   max-width: 100vw;
   min-width: 375px;
   min-height: 100vh;
+  position: relative;
   font-family: $raleway;
   font-weight: normal;
   background: linear-gradient(270deg, #626cb0, #020623);
   background-size: 400% 400%;
+  overflow-x: hidden;
   animation: HeroAnimation 30s ease infinite;
 
   @keyframes HeroAnimation {

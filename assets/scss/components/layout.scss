@@ -47,10 +47,10 @@ section {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px;
+  padding: 140px 60px 100px;
 
   @include breakpoint (sm) {
-    padding: 40px;
+    padding: 120px 40px 100px;
   }
 }
 
@@ -58,27 +58,6 @@ section {
   width: 100%;
   display: block;
   position: relative;
-
-  &.flex {
-    display: flex;
-
-    &.central {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
-
-    &.space_between {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    &.vertical_stretch {
-      justify-content: stretch;
-    }
-  }
 }
 
 .half_section {
@@ -119,6 +98,27 @@ section {
   }
 }
 
+.flex {
+  display: flex;
+
+  &.central {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  &.space_between {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &.vertical_stretch {
+    justify-content: stretch;
+  }
+}
+
 .block {
   width: 100%;
   display: block;
@@ -134,7 +134,7 @@ section {
 
 p,
 .text {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .line_spacer {

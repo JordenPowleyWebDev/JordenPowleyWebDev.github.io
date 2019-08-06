@@ -20,6 +20,10 @@ header#header {
   transition: .5s ease-in-out;
   opacity: 1;
 
+  @include breakpoint (sm) {
+    min-height: 120px;
+  }
+
   #main_nav_container {
     width: 60%;
     height: 100vh;

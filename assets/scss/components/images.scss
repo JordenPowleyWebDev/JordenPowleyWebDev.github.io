@@ -11,7 +11,7 @@
 
 .image_container {
   width: 100%;
-  max-width: 70%;
+  max-width: 600px;
   height: auto;
   display: block;
   position: relative;
@@ -20,14 +20,14 @@
   padding-top: 100%;
 
   &.rectangle {
-    max-width: 70%;
-    max-height: 600px;
+    max-width: 600px;
+    max-height: 480px;
     padding-top: 80%;
   }
 
   &.square {
-    max-width: 70%;
-    max-height: 800px;
+    max-width: 600px;
+    max-height: 600px;
     padding-top: 100%
   }
 
