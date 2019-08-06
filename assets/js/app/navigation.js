@@ -65,7 +65,7 @@
          */
         function navTraverse ($element) {
             // Pull the data from the nav item
-            var location = "/content" + $element.attr('href') + ".html";
+            var location = $element.attr('href') + ".html";
             var route = $element.data('route');
 
             // Cover the wrapper
@@ -75,34 +75,28 @@
             $element.addClass('main');
             $('#main_nav_container .nav_item:not(.main)').addClass('fade');
 
-            // Ajax in the file
-            $.ajax({
-                url: location,
-                complete: function (data) {
-                    setTimeout(function () {
-                        // Change the page address
-                        window.history.pushState("", "", route);
+            setTimeout(function () {
+                // Change the page address
+                window.history.pushState("", "", route);
 
-                        // Scroll to the top of the page
-                        window.scrollTo(0, 0);
+                // Scroll to the top of the page
+                window.scrollTo(0, 0);
 
-                        // Clear out the wrapper and load in the new page
-                        $('#wrapper').html(data.responseText);
+                // Clear out the wrapper and load in the new page
+                $('#wrapper').load(location + " #wrapper section");
 
-                        setTimeout(function () {
-                            // Close the main nav
-                            closeMainNav();
-                        }, 1000);
+                setTimeout(function () {
+                    // Close the main nav
+                    closeMainNav();
+                }, 1000);
 
-                        setTimeout(function () {
-                            // Remove transition classes
-                            $('#main_nav_container').removeClass('transition');
-                            $('#main_nav_container .nav_item').removeClass('fade');
-                            $('#main_nav_container .nav_item').removeClass('main');
-                        }, 1500);
-                    }, 500);
-                }
-            });
+                setTimeout(function () {
+                    // Remove transition classes
+                    $('#main_nav_container').removeClass('transition');
+                    $('#main_nav_container .nav_item').removeClass('fade');
+                    $('#main_nav_container .nav_item').removeClass('main');
+                }, 1500);
+            }, 500);
         } // END navTraverse()
 
         /**
