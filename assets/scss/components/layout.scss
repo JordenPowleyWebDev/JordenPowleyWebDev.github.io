@@ -136,3 +136,28 @@ p,
 .text {
   margin-bottom: 10px;
 }
+
+.line_spacer {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  border-top-width: 2px;
+  border-style: solid;
+
+  &.white_spacer {
+    border-color:  $white;
+  }
+
+  &.red_pink_spacer {
+    border-color: $redPink;
+  }
+
+  &.dark_blue_spacer {
+    border-color: $darkBlue;
+  }
+
+  &.light_blue_spacer {
+    border-color: $lightBlue;
+  }
+}
