@@ -77,6 +77,13 @@ section {
   &.no_float {
     float: unset;
   }
+  
+  &.mob_full_width {
+    @include breakpoint (sm) {
+      width: 100%;
+      float: unset;
+    }
+  }
 }
 
 .central_float {
@@ -116,6 +123,16 @@ section {
 
   &.vertical_stretch {
     justify-content: stretch;
+  }
+
+  &.mob_no_flex {
+    @include breakpoint (sm) {
+      display: block;
+      flex-direction: unset;
+      justify-content: unset;
+      align-items: unset;
+      align-content: unset;
+    }
   }
 }
 

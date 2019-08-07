@@ -63,3 +63,24 @@ ul {
 .large_text {font-size: 30px;}
 .medium_text {font-size: 18px;}
 .small_text {font-size: 16px;}
+
+.text_left {text-align: left;}
+.text_center {text-align: center;}
+.text_right {text-align: right;}
+
+.mob_text_left {
+  @include breakpoint (sm) {
+    text-align: left;
+  }
+}
+.mob_text_center {
+  @include breakpoint (sm) {
+    text-align: center;
+  }
+}
+
+.mob_text_right {
+  @include breakpoint (sm) {
+    text-align: right;
+  }
+}
