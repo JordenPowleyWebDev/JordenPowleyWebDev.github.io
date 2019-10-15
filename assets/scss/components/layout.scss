@@ -77,7 +77,14 @@ section {
   &.no_float {
     float: unset;
   }
-  
+
+  &.tab_full_width {
+    @include breakpoint (md) {
+      width: 100%;
+      float: unset;
+    }
+  }
+
   &.mob_full_width {
     @include breakpoint (sm) {
       width: 100%;
@@ -123,6 +130,16 @@ section {
 
   &.vertical_stretch {
     justify-content: stretch;
+  }
+
+  .tab_no_flex {
+    @include breakpoint (md) {
+      display: block;
+      flex-direction: unset;
+      justify-content: unset;
+      align-items: unset;
+      align-content: unset;
+    }
   }
 
   &.mob_no_flex {
