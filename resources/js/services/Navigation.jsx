@@ -100,7 +100,7 @@ export default class Navigation extends React.Component {
                             navigating: false,
                             footerVisible: true,
                         }, () => this.handleResetNavigation());
-                    }, 1000);
+                    }, 500);
                 });
             }, 500);
         });

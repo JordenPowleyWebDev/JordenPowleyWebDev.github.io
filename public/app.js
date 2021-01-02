@@ -41578,7 +41578,7 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
               }, function () {
                 return _this2.handleResetNavigation();
               });
-            }, 1000);
+            }, 500);
           });
         }, 500);
       });

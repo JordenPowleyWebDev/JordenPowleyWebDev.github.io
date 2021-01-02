@@ -1,3 +1,12 @@
+a , a:active, a:visited{
+  text-decoration: none;
+  transition: opacity 0.2s ease-in;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $ubuntu;
