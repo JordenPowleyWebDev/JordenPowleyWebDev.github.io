@@ -1,8 +1,5 @@
 import React from 'react';
 import {Routes} from "../constants/Routes";
-import Index from "../pages/Index";
-import About from "../pages/About";
-import Projects from "../pages/Projects";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 
@@ -39,7 +36,6 @@ export default class Navigation extends React.Component {
         this.handleToggleNavigation = this.handleToggleNavigation.bind(this);
         this.handleToggleFooter     = this.handleToggleFooter.bind(this);
         this.handleNavigation       = this.handleNavigation.bind(this);
-        this.renderPage             = this.renderPage.bind(this);
     }
 
     handleResetNavigation() {
@@ -105,24 +101,6 @@ export default class Navigation extends React.Component {
         });
     }
 
-    renderPage(activeRoute) {
-        switch (activeRoute.name) {
-            case Routes.about.name:
-                return (
-                    <About />
-                );
-            case Routes.projects.name:
-                return (
-                    <Projects />
-                );
-            case Routes.index.name:
-            default:
-                return (
-                    <Index />
-                );
-        }
-    }
-
     render() {
         const { activeRoute, footerVisible, navigationOpen, navigating, nextRoute } = this.state;
 
@@ -139,7 +117,7 @@ export default class Navigation extends React.Component {
                     resetFooter={() => this.handleResetFooter()}
                     toggleFooter={() => this.handleToggleFooter()}
                 />
-                {this.renderPage(activeRoute)}
+                {activeRoute.page}
                 <Footer
                     visible={footerVisible}
                 />
