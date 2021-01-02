@@ -1,3 +1,2 @@
-.idea/
-node_modules/
-vendor/S
+/node_modules/*
+.idea
