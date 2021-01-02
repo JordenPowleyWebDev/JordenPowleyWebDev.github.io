@@ -7,10 +7,10 @@ export default class Footer extends React.PureComponent {
 
     render() {
         return (
-            <footer className="w-100 d-block position-relative p-5 bg-red-pink">
+            <footer className="w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink">
                 <div className="row m-0 p-0">
-                    <div className="col m-0 p-4 pt-0">
-                        <h4 className="h5 mb-5 text-white">Get In Touch</h4>
+                    <div className="col m-0 p-0 p-md-4 pt-0">
+                        <h4 className="h5 mb-5 text-white no-select">Get In Touch</h4>
                         <a className="d-block position-relative mb-3 text-white"
                            href="mailto:jorden.powley.webdev@gmail.com"
                         >
@@ -27,7 +27,7 @@ export default class Footer extends React.PureComponent {
                     </div>
                 </div>
                 <div className="row m-0 p-0">
-                    <div className="col m-0 p-4 pb-0">
+                    <div className="col m-0 p-0 p-md-4 pt-4 pb-0">
                         <div className="text-white no-select">&copy; Jorden Powley - {new Date().getFullYear()}</div>
                     </div>
                 </div>

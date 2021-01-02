@@ -40671,13 +40671,13 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        className: "w-100 d-block position-relative p-5 bg-red-pink"
+        className: "w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col m-0 p-4 pt-0"
+        className: "col m-0 p-0 p-md-4 pt-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-        className: "h5 mb-5 text-white"
+        className: "h5 mb-5 text-white no-select"
       }, "Get In Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "d-block position-relative mb-3 text-white",
         href: "mailto:jorden.powley.webdev@gmail.com"
@@ -40693,7 +40693,7 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col m-0 p-4 pb-0"
+        className: "col m-0 p-0 p-md-4 pt-4 pb-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-white no-select"
       }, "\xA9 Jorden Powley - ", new Date().getFullYear()))));
@@ -41063,7 +41063,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "display-4 mb-0 text-white no-select"
+        className: "display-3 mb-0 text-white no-select"
       }, "Jorden Powley"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         className: "h1 mb-0 text-white no-select"
       }, "Web Developer")));

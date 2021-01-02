@@ -13,7 +13,7 @@ export default class Index extends React.Component {
                 className={"position-fixed d-flex justify-content-center align-items-center gradient-background"}
             >
                 <div className={"text-center"}>
-                    <h1 className="display-4 mb-0 text-white no-select">Jorden Powley</h1>
+                    <h1 className="display-3 mb-0 text-white no-select">Jorden Powley</h1>
                     <h2 className="h1 mb-0 text-white no-select">Web Developer</h2>
                 </div>
             </Page>
