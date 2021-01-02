@@ -40662,14 +40662,30 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
   var _super = _createSuper(Footer);
 
   function Footer(props) {
+    var _this;
+
     _classCallCheck(this, Footer);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.handleScrollTop = _this.handleScrollTop.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Footer, [{
+    key: "handleScrollTop",
+    value: function handleScrollTop(event) {
+      event.preventDefault();
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $($('body')).offset().top
+      }, {
+        duration: 500
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
         className: "w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -40677,17 +40693,17 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m-0 p-0 p-md-4 pt-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-        className: "h5 mb-5 text-white no-select"
+        className: "h5 mb-4 mb-md-5 text-white no-select"
       }, "Get In Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         className: "d-block position-relative mb-3 text-white",
         href: "mailto:jorden.powley.webdev@gmail.com"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "far fa-envelope fa-fw fa-1x mr-3"
+        className: "far fa-envelope fa-fw mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "jorden.powley.webdev@gmail.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "d-block position-relative mb-5 text-white",
+        className: "d-block position-relative mb-4 mb-md-5 text-white",
         href: "tel:+447446899186"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-mobile-alt fa-fw mr-3"
+        className: "fas fa-mobile-alt fa-fw mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "07446 899186")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "w-100 border-bottom border-white"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -40695,8 +40711,22 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col m-0 p-0 p-md-4 pt-4 pb-0"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row m-0 p-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-md-6 m-0 mb-4 mb-md-0 p-0"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "text-white no-select"
-      }, "\xA9 Jorden Powley - ", new Date().getFullYear()))));
+      }, "\xA9 Jorden Powley - ", new Date().getFullYear())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12 col-md-6 m-0 p-0 d-flex align-content-center align-items-center justify-content-start justify-content-md-end"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "text-white h5 m-0 cursor-pointer no-select",
+        style: {
+          fontSize: "0.8rem"
+        },
+        onClick: function onClick(event) {
+          return _this2.handleScrollTop(event);
+        }
+      }, "Back To Top"))))));
     }
   }]);
 

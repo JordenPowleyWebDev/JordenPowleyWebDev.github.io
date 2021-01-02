@@ -37,8 +37,7 @@
       <change beforePath="$PROJECT_DIR$/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bootstrap.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,7 @@
       <workItem from="1608312385777" duration="3562000" />
       <workItem from="1609336905405" duration="4168000" />
       <workItem from="1609585885151" duration="47000" />
-      <workItem from="1609586401950" duration="12988000" />
+      <workItem from="1609586401950" duration="14152000" />
     </task>
     <servers />
   </component>

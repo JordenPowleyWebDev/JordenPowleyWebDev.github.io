@@ -17153,6 +17153,10 @@ h6,
           user-select: none;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 body {
   font-family: "Raleway", Helvetica, sans-serif;
   background-color: #020623;
