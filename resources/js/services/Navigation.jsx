@@ -11,8 +11,24 @@ export default class Navigation extends React.Component {
     constructor(props) {
         super(props);
 
+        let initialRoute = Routes.index;
+        switch (props.initialRoute) {
+            case Routes.about.name:
+                initialRoute = Routes.about;
+                break;
+            case Routes.projects.name:
+                initialRoute = Routes.projects;
+                break;
+            case Routes.work.name:
+                initialRoute = Routes.work;
+                break;
+            case Routes.index.name:
+                initialRoute = Routes.index;
+                break;
+        }
+
         this.state = {
-            activeRoute:    Routes.index,
+            activeRoute:    initialRoute,
             nextRoute:      null,
             navigating:     false,
             navigationOpen: false,
@@ -82,6 +98,7 @@ export default class Navigation extends React.Component {
                         this.setState({
                             nextRoute: null,
                             navigating: false,
+                            footerVisible: true,
                         }, () => this.handleResetNavigation());
                     }, 1000);
                 });

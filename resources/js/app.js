@@ -10,11 +10,14 @@ export default class App extends React.Component {
     }
 
     render() {
-        return <Navigation />;
+        const { initialRoute } = this.props;
+
+        return <Navigation initialRoute={initialRoute} />;
     }
 }
 
 const app = document.getElementById('app');
 if (app) {
-    ReactDOM.render(<App />, app);
+    const initialRoute = app.dataset.initial;
+    ReactDOM.render(<App initialRoute={initialRoute} />, app);
 }

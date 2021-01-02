@@ -40380,7 +40380,10 @@ var App = /*#__PURE__*/function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      var initialRoute = this.props.initialRoute;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_services_Navigation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        initialRoute: initialRoute
+      });
     }
   }]);
 
@@ -40391,7 +40394,10 @@ var App = /*#__PURE__*/function (_React$Component) {
 var app = document.getElementById('app');
 
 if (app) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), app);
+  var initialRoute = app.dataset.initial;
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, {
+    initialRoute: initialRoute
+  }), app);
 }
 
 /***/ }),
@@ -41472,8 +41478,28 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, Navigation);
 
     _this = _super.call(this, props);
+    var initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index;
+
+    switch (props.initialRoute) {
+      case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].about.name:
+        initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].about;
+        break;
+
+      case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].projects.name:
+        initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].projects;
+        break;
+
+      case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work.name:
+        initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work;
+        break;
+
+      case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index.name:
+        initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index;
+        break;
+    }
+
     _this.state = {
-      activeRoute: _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index,
+      activeRoute: initialRoute,
       nextRoute: null,
       navigating: false,
       navigationOpen: false,
@@ -41547,7 +41573,8 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
             setTimeout(function () {
               _this2.setState({
                 nextRoute: null,
-                navigating: false
+                navigating: false,
+                footerVisible: true
               }, function () {
                 return _this2.handleResetNavigation();
               });
