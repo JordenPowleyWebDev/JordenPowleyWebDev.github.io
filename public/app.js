@@ -41720,10 +41720,6 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
         initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].projects;
         break;
 
-      case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work.name:
-        initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work;
-        break;
-
       case _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index.name:
         initialRoute = _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index;
         break;

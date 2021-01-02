@@ -15,9 +15,6 @@ export default class Navigation extends React.Component {
             case Routes.projects.name:
                 initialRoute = Routes.projects;
                 break;
-            case Routes.work.name:
-                initialRoute = Routes.work;
-                break;
             case Routes.index.name:
                 initialRoute = Routes.index;
                 break;
