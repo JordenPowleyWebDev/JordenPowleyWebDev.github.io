@@ -14,9 +14,4 @@ export const Routes = {
         name: "projects",
         label: "Projects",
     },
-    work:  {
-        path: "/work",
-        name: "work",
-        label: "Work",
-    },
 }

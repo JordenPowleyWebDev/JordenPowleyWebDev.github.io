@@ -33,7 +33,13 @@ export default class Navigation extends React.PureComponent {
         }
 
         return (
-            <a href={route.path} className={classes} onClick={(event) => this.handleClick(event, route)}>{route.label}</a>
+            <a
+                key={route.name}
+                href={route.path}
+                className={classes}
+                onClick={(event) => this.handleClick(event, route)}>
+                {route.label}
+            </a>
         );
     }
 
@@ -52,10 +58,7 @@ export default class Navigation extends React.PureComponent {
         return (
             <div id="main-navigation" className={classes}>
                 <nav>
-                    {this.renderNavItem(Routes.index)}
-                    {this.renderNavItem(Routes.about)}
-                    {this.renderNavItem(Routes.projects)}
-                    {this.renderNavItem(Routes.work)}
+                    {Object.values(Routes).map((element) => this.renderNavItem(element))}
                 </nav>
             </div>
         );

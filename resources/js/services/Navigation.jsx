@@ -2,7 +2,6 @@ import React from 'react';
 import {Routes} from "../constants/Routes";
 import Index from "../pages/Index";
 import About from "../pages/About";
-import Work from "../pages/Work";
 import Projects from "../pages/Projects";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
@@ -115,10 +114,6 @@ export default class Navigation extends React.Component {
             case Routes.projects.name:
                 return (
                     <Projects />
-                );
-            case Routes.work.name:
-                return (
-                    <Work />
                 );
             case Routes.index.name:
             default:
