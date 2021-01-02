@@ -17157,9 +17157,17 @@ h6,
   cursor: pointer;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: "Raleway", Helvetica, sans-serif;
   background-color: #020623;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 header {
@@ -17224,6 +17232,14 @@ header {
   100% {
     background-position: 0 50%;
   }
+}
+
+footer {
+  transition: opacity 0.2s ease-in;
+}
+
+footer.transparent {
+  opacity: 0;
 }
 
 #hamburger-icon {
@@ -17410,5 +17426,92 @@ header {
 
 #email-icon.white span {
   background: #fff;
+}
+
+#main-navigation {
+  width: 60%;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 50%;
+  right: -100%;
+  transform: translateY(-50%);
+  background: #ff224b;
+  transition: 0.2s ease-in;
+  font-size: 30px;
+}
+
+@media (max-width: 991.98px) {
+  #main-navigation {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #main-navigation {
+    width: 100%;
+  }
+}
+
+#main-navigation.active {
+  right: 0;
+}
+
+#main-navigation.transition {
+  width: 100%;
+  transition: 0.5s ease-in;
+}
+
+#main-navigation nav {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#main-navigation nav a {
+  width: 100%;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  outline: none;
+}
+
+@media (max-width: 767.98px) {
+  #main-navigation nav a {
+    font-size: 25px;
+  }
+}
+
+#main-navigation nav a.fade {
+  height: 0;
+  font-size: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#main-navigation nav a.main {
+  font-size: 40px;
+}
+
+@media (max-width: 767.98px) {
+  #main-navigation nav a.main {
+    font-size: 30px;
+  }
+}
+
+#main-navigation nav a.main:hover {
+  opacity: 1;
+  text-decoration: none;
 }
 

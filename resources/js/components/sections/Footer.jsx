@@ -8,7 +8,7 @@ export default class Footer extends React.PureComponent {
     }
 
     handleScrollTop(event) {
-        event.preventDefault();
+        event.stopPropagation();
 
         $([document.documentElement, document.body]).animate({
             scrollTop: $($('body')).offset().top,
@@ -18,8 +18,15 @@ export default class Footer extends React.PureComponent {
     }
 
     render() {
+        const { visible } = this.props;
+
+        let classes = "w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink";
+        if (visible === false) {
+            classes = "w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink transparent";
+        }
+
         return (
-            <footer className="w-100 d-block position-relative py-5 px-3 px-md-5 bg-red-pink">
+            <footer className={classes}>
                 <div className="row m-0 p-0">
                     <div className="col m-0 p-0 p-md-4 pt-0">
                         <h4 className="h5 mb-4 mb-md-5 text-white no-select">Get In Touch</h4>

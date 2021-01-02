@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from "../components/sections/Page";
+import {Routes} from "../constants/Routes";
 
 export default class Index extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class Index extends React.Component {
     render() {
         return (
             <Page
-                id={"index"}
+                id={Routes.index.name}
                 className={"position-fixed d-flex justify-content-center align-items-center gradient-background"}
             >
                 <div className={"text-center"}>

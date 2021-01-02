@@ -3,9 +3,17 @@ $navIndex: 1500;
 $pageIndex: 500;
 $footerIndex: 750;
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   font-family: $raleway;
   background-color: $darkBlue;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 header {
@@ -50,5 +58,9 @@ header {
 }
 
 footer {
+  transition: opacity 0.2s ease-in;
 
+  &.transparent {
+    opacity: 0;
+  }
 }

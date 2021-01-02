@@ -33,11 +33,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd397110-9eda-4f2a-84ff-6b34a2becf45" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/sass/components/navigation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/icons/Email.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/icons/Email.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/icons/Hamburger.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/icons/Hamburger.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/bootstrap.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bootstrap.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/constants/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/constants/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/Projects.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Projects.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/Work.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Work.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/services/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/Navigation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +99,7 @@
       <workItem from="1608312385777" duration="3562000" />
       <workItem from="1609336905405" duration="4168000" />
       <workItem from="1609585885151" duration="47000" />
-      <workItem from="1609586401950" duration="14152000" />
+      <workItem from="1609586401950" duration="18059000" />
     </task>
     <servers />
   </component>

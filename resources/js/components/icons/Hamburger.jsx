@@ -5,18 +5,7 @@ export default class Hamburger extends React.PureComponent {
     constructor(props) {
         super(props);
 
-        this.iconColor      = this.iconColor.bind(this);
         this.handleClick    = this.handleClick.bind(this);
-    }
-
-    iconColor() {
-        const { active } = this.props;
-
-        if (active === true) {
-            return "active white";
-        }
-
-        return "red-pink";
     }
 
     handleClick(event) {
@@ -31,10 +20,12 @@ export default class Hamburger extends React.PureComponent {
     }
 
     render() {
+        const { active, color } = this.props;
+
         return (
             <div
                 id="hamburger-icon"
-                className={this.iconColor()}
+                className={active ? "active "+color : color}
                 onClick={(event) => this.handleClick(event)}
             >
                 <span></span>
@@ -46,6 +37,7 @@ export default class Hamburger extends React.PureComponent {
 }
 
 Hamburger.propTypes = {
+    color:      PropTypes.string.isRequired,
     onClick:    PropTypes.func.isRequired,
     active:     PropTypes.bool.isRequired,
     disabled:   PropTypes.bool,

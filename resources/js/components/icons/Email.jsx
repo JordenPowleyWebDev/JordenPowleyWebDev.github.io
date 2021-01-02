@@ -5,18 +5,7 @@ export default class Email extends React.PureComponent {
     constructor(props) {
         super(props);
 
-        this.iconColor      = this.iconColor.bind(this);
-        this.handleClick    = this.handleClick.bind(this);
-    }
-
-    iconColor() {
-        const { active } = this.props;
-
-        if (active === true) {
-            return "active white";
-        }
-
-        return "red-pink";
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(event) {
@@ -31,10 +20,12 @@ export default class Email extends React.PureComponent {
     }
 
     render() {
+        const { active, color } = this.props;
+
         return (
             <div
                 id="email-icon"
-                className={this.iconColor()}
+                className={active ? "active "+color : color}
                 onClick={(event) => this.handleClick(event)}
             >
                 <span className="top-line"></span>
@@ -49,6 +40,7 @@ export default class Email extends React.PureComponent {
 }
 
 Email.propTypes = {
+    color:      PropTypes.string.isRequired,
     onClick:    PropTypes.func.isRequired,
     active:     PropTypes.bool.isRequired,
     disabled:   PropTypes.bool,

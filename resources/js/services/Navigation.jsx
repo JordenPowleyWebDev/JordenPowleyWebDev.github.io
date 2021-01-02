@@ -12,14 +12,36 @@ export default class Navigation extends React.Component {
         super(props);
 
         this.state = {
-            currentPage: Routes.index.name
+            activeRoute:    Routes.index,
+            footerVisible:  true
         };
 
-        this.renderPage = this.renderPage.bind(this);
+        this.handleResetFooter  = this.handleResetFooter.bind(this);
+        this.handleToggleFooter = this.handleToggleFooter.bind(this);
+        this.handleNavigation   = this.handleNavigation.bind(this);
+        this.renderPage         = this.renderPage.bind(this);
     }
 
-    renderPage(currentPage) {
-        switch (currentPage) {
+    handleResetFooter() {
+        this.setState({
+            footerVisible: true
+        });
+    }
+
+    handleToggleFooter() {
+        const { footerVisible } = this.state;
+
+        this.setState({
+            footerVisible: !footerVisible
+        });
+    }
+
+    handleNavigation(route) {
+
+    }
+
+    renderPage(activeRoute) {
+        switch (activeRoute.name) {
             case Routes.about.name:
                 return (
                     <About />
@@ -41,13 +63,20 @@ export default class Navigation extends React.Component {
     }
 
     render() {
-        const { currentPage } = this.state;
+        const { activeRoute, footerVisible } = this.state;
 
         return (
             <React.Fragment>
-                <Header currentPage={currentPage} />
-                {this.renderPage(currentPage)}
-                <Footer />
+                <Header
+                    activeRoute={activeRoute}
+                    navigate={(route) => this.handleNavigation(route)}
+                    resetFooter={() => this.handleResetFooter()}
+                    toggleFooter={() => this.handleToggleFooter()}
+                />
+                {this.renderPage(activeRoute)}
+                <Footer
+                    visible={footerVisible}
+                />
             </React.Fragment>
         )
 
