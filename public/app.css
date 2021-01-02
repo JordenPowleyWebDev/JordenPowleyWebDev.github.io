@@ -17122,7 +17122,7 @@ h6,
 .h5,
 .h6 {
   font-family: "Ubuntu", Calibri, sans-serif;
-  font-weight: 300;
+  font-weight: 200 !important;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -17170,6 +17170,18 @@ h6,
   cursor: pointer;
 }
 
+.border-dark-blue {
+  border-color: #020623 !important;
+}
+
+.border-light-blue {
+  border-color: #818de3 !important;
+}
+
+.border-red-pink {
+  border-color: #ff224b !important;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -17185,7 +17197,6 @@ body.no-scroll {
 
 header {
   width: 100%;
-  min-height: 140px;
   z-index: 1000;
   display: block;
   position: fixed;
@@ -17195,6 +17206,12 @@ header {
   opacity: 1;
 }
 
+@media (max-width: 767.98px) {
+  header {
+    position: relative;
+  }
+}
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -17202,6 +17219,7 @@ header {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0;
 }
 
 .page {
@@ -17259,9 +17277,7 @@ footer.transparent {
   width: 25px;
   height: 20px;
   display: block;
-  position: fixed;
-  top: 60px;
-  right: 60px;
+  position: relative;
   transition: 0.5s ease-in-out;
   cursor: pointer;
   opacity: 1;
@@ -17341,10 +17357,15 @@ footer.transparent {
   width: 25px;
   height: 20px;
   display: block;
-  position: absolute;
-  top: 60px;
-  right: 120px;
+  position: relative;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
+  opacity: 1;
+}
+
+#email-icon.invisible {
+  opacity: 0;
+  pointer-events: none;
 }
 
 #email-icon span {

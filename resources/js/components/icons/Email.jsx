@@ -20,12 +20,20 @@ export default class Email extends React.PureComponent {
     }
 
     render() {
-        const { active, color } = this.props;
+        const { active, color, className = "" } = this.props;
+
+        let classes = color;
+        if (active) {
+            classes += " active";
+        }
+        if (className) {
+            classes += " "+className;
+        }
 
         return (
             <div
                 id="email-icon"
-                className={active ? "active "+color : color}
+                className={classes}
                 onClick={(event) => this.handleClick(event)}
             >
                 <span className="top-line"></span>

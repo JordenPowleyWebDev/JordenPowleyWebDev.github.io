@@ -54,7 +54,7 @@ export default class Header extends React.PureComponent {
         const { emailActive } = this.state;
 
         return (
-            <header>
+            <header className={"px-5 pt-5 d-flex justify-content-end align-content-center"}>
                 <Navigation
                     active={navigationOpen}
                     activeRoute={activeRoute}
@@ -67,6 +67,7 @@ export default class Header extends React.PureComponent {
                     color={emailActive || navigationOpen ? "white" : "red-pink"}
                     onClick={() => this.handleEmail()}
                     disabled={navigating}
+                    className={"mr-4"}
                 />
                 <Hamburger
                     active={navigationOpen}

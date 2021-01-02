@@ -11,7 +11,7 @@ export default class Page extends React.PureComponent {
 
         return (
             <div className={"wrapper"}>
-                <div id={id} className={"container-fluid page "+className}>
+                <div id={id} className={"container-fluid p-4 p-md-5 page "+className}>
                     {children}
                 </div>
             </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Page from "../components/sections/Page";
 import {Routes} from "../constants/Routes";
 
-export default class Projects extends React.Component {
+export default class Projects extends React.PureComponent {
     constructor(props) {
         super(props);
     }

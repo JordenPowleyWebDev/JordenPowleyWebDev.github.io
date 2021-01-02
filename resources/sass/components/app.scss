@@ -18,7 +18,6 @@ body {
 
 header {
   width: 100%;
-  min-height: 140px;
   z-index: $headerIndex;
   display: block;
   position: fixed;
@@ -26,6 +25,10 @@ header {
   background: transparent;
   transition: .5s ease-in-out;
   opacity: 1;
+
+  @include media-breakpoint-down (sm) {
+    position: relative;
+  }
 }
 
 .wrapper {
@@ -35,6 +38,7 @@ header {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 0;
 }
 
 .page {
