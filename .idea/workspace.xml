@@ -33,25 +33,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd397110-9eda-4f2a-84ff-6b34a2becf45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/sections/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/sections/Navigation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/sections/Page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/bootstrap.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/components/email.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/components/hamburger.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/sections/Page.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/sections/Page.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/Index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/services/Navigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/services/Navigation.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/components/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/icons/Email.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/icons/Hamburger.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <workItem from="1608312385777" duration="3562000" />
       <workItem from="1609336905405" duration="4168000" />
       <workItem from="1609585885151" duration="47000" />
-      <workItem from="1609586401950" duration="9842000" />
+      <workItem from="1609586401950" duration="12341000" />
     </task>
     <servers />
   </component>

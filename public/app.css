@@ -17106,6 +17106,15 @@ header {
   opacity: 1;
 }
 
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page {
   width: 100vw;
   min-height: 100vh;

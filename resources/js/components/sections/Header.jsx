@@ -7,7 +7,8 @@ export default class Header extends React.PureComponent {
         super(props);
 
         this.state = {
-            navigationOpen: false
+            navigationOpen: false,
+            emailActive:    false,
         };
 
         this.handleHamburger    = this.handleHamburger.bind(this);
@@ -18,31 +19,44 @@ export default class Header extends React.PureComponent {
         const { navigationOpen } = this.state;
 
         this.setState({
-            navigationOpen: !navigationOpen
+            navigationOpen: !navigationOpen,
+            emailActive:    false,
         });
     }
 
     handleEmail() {
-        console.log("TODO - Handle Email Icon Click");
+        this.setState({
+            navigationOpen: false,
+            emailActive:    true,
+        }, () => {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $($('body footer')).offset().top,
+                complete: () => this.setState({
+                    emailActive: false,
+                })
+            }, {
+                duration: 500,
+                complete: () => this.setState({
+                    emailActive: false,
+                })
+            });
+        });
     }
 
     render() {
-        const { navigationOpen } = this.state;
+        const { navigationOpen, emailActive } = this.state;
 
         return (
             <header>
                 <Email
-                    /* TODO - Include Active Scrolling To Footer */
-                    active={false}
+                    active={emailActive}
                     onClick={() => this.handleEmail()}
-                    /* TODO - Include Correct Disabled Status */
                     disabled={false}
                 />
                 <Hamburger
                     active={navigationOpen}
                     onClick={() => this.handleHamburger()}
-                    /* TODO - Include Correct Disabled Status */
-                    disabled={false}
+                    disabled={emailActive}
                 />
             </header>
         );

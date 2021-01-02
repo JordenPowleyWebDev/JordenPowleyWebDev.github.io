@@ -10,8 +10,10 @@ export default class Page extends React.PureComponent {
         const { id, className, children } = this.props;
 
         return (
-            <div id={id} className={"container-fluid page "+className}>
-                {children}
+            <div className={"wrapper"}>
+                <div id={id} className={"container-fluid page "+className}>
+                    {children}
+                </div>
             </div>
         );
     }
