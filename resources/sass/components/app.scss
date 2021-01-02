@@ -1,4 +1,45 @@
+$headerIndex: 1000;
+$navIndex: 1500;
+$pageIndex: 500;
+$footerIndex: 750;
+
 body {
   font-family: $raleway;
   background-color: $darkBlue;
+}
+
+header {
+  width: 100%;
+  min-height: 140px;
+  z-index: $headerIndex;
+  display: block;
+  position: fixed;
+  left: 0;
+  background: transparent;
+  transition: .5s ease-in-out;
+  opacity: 1;
+}
+
+.page {
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.gradient-background {
+  background: linear-gradient(270deg, #626cb0, #020623);
+  background-size: 400% 400%;
+  animation: HeroAnimation 30s ease infinite;
+
+  @keyframes HeroAnimation {
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+  }
+}
+
+footer {
+
 }

@@ -4,22 +4,22 @@ import Index from "../pages/Index";
 import About from "../pages/About";
 import Work from "../pages/Work";
 import Projects from "../pages/Projects";
+import Header from "../components/sections/Header";
+import Footer from "../components/sections/Footer";
 
 export default class Navigation extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            currentRoute: Routes.index.name
+            currentPage: Routes.index.name
         };
 
-        this.switcher = this.switcher.bind(this);
+        this.renderPage = this.renderPage.bind(this);
     }
 
-    switcher() {
-        const { currentRoute } = this.state;
-
-        switch (currentRoute) {
+    renderPage(currentPage) {
+        switch (currentPage) {
             case Routes.about.name:
                 return (
                     <About />
@@ -41,6 +41,15 @@ export default class Navigation extends React.Component {
     }
 
     render() {
-        return this.switcher();
+        const { currentPage } = this.state;
+
+        return (
+            <React.Fragment>
+                <Header currentPage={currentPage} />
+                {this.renderPage(currentPage)}
+                <Footer />
+            </React.Fragment>
+        )
+
     }
 }
