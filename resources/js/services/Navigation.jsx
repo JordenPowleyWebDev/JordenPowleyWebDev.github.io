@@ -13,13 +13,26 @@ export default class Navigation extends React.Component {
 
         this.state = {
             activeRoute:    Routes.index,
+            nextRoute:      null,
+            navigating:     false,
+            navigationOpen: false,
             footerVisible:  true
         };
 
-        this.handleResetFooter  = this.handleResetFooter.bind(this);
-        this.handleToggleFooter = this.handleToggleFooter.bind(this);
-        this.handleNavigation   = this.handleNavigation.bind(this);
-        this.renderPage         = this.renderPage.bind(this);
+        this.handleResetNavigation  = this.handleResetNavigation.bind(this);
+        this.handleResetFooter      = this.handleResetFooter.bind(this);
+        this.handleToggleNavigation = this.handleToggleNavigation.bind(this);
+        this.handleToggleFooter     = this.handleToggleFooter.bind(this);
+        this.handleNavigation       = this.handleNavigation.bind(this);
+        this.renderPage             = this.renderPage.bind(this);
+    }
+
+    handleResetNavigation() {
+        document.body.classList.remove("no-scroll");
+
+        this.setState({
+            navigationOpen: false
+        });
     }
 
     handleResetFooter() {
@@ -36,8 +49,44 @@ export default class Navigation extends React.Component {
         });
     }
 
-    handleNavigation(route) {
+    handleToggleNavigation() {
+        const { navigationOpen } = this.state;
 
+        if (!navigationOpen === true) {
+            document.body.classList.add("no-scroll");
+        } else {
+            document.body.classList.remove("no-scroll");
+        }
+
+        this.setState({
+            navigationOpen: !navigationOpen
+        });
+    }
+
+    handleNavigation(route) {
+        this.setState({
+            nextRoute: route,
+            navigating: true,
+        }, () => {
+            setTimeout(() => {
+                // Change the page address
+                window.history.pushState("", route.label, route.path);
+
+                // Scroll to the top of the page
+                window.scrollTo(0, 0);
+
+                this.setState({
+                    activeRoute: route
+                }, () => {
+                    setTimeout(() => {
+                        this.setState({
+                            nextRoute: null,
+                            navigating: false,
+                        }, () => this.handleResetNavigation());
+                    }, 1000);
+                });
+            }, 500);
+        });
     }
 
     renderPage(activeRoute) {
@@ -63,13 +112,18 @@ export default class Navigation extends React.Component {
     }
 
     render() {
-        const { activeRoute, footerVisible } = this.state;
+        const { activeRoute, footerVisible, navigationOpen, navigating, nextRoute } = this.state;
 
         return (
             <React.Fragment>
                 <Header
+                    navigationOpen={navigationOpen}
                     activeRoute={activeRoute}
+                    nextRoute={nextRoute}
+                    navigating={navigating}
                     navigate={(route) => this.handleNavigation(route)}
+                    resetNavigation={() => this.handleResetNavigation()}
+                    toggleNavigation={() => this.handleToggleNavigation()}
                     resetFooter={() => this.handleResetFooter()}
                     toggleFooter={() => this.handleToggleFooter()}
                 />

@@ -44,7 +44,7 @@
       margin-right: auto;
       padding: 15px 40px;
       color: $white;
-      font-size: 30px;
+      font-size: 2rem;
       text-align: center;
       text-transform: uppercase;
       text-decoration: none;
@@ -56,17 +56,16 @@
       }
 
       &.fade {
-        height: 0;
-        font-size: 0;
-        opacity: 0;
+        font-size: 1.8rem;
+        opacity: 0.3;
         pointer-events: none;
       }
 
       &.main {
-        font-size: 40px;
+        font-size: 2.4rem;
 
         @include media-breakpoint-down(sm) {
-          font-size: 30px;
+          font-size: 2.6rem;
         }
 
         &:hover {

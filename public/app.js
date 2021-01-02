@@ -40782,7 +40782,6 @@ var Header = /*#__PURE__*/function (_React$PureComponent) {
 
     _this = _super.call(this, props);
     _this.state = {
-      navigationOpen: false,
       emailActive: false
     };
     _this.handleHamburger = _this.handleHamburger.bind(_assertThisInitialized(_this));
@@ -40793,20 +40792,14 @@ var Header = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(Header, [{
     key: "handleHamburger",
     value: function handleHamburger() {
-      var navigationOpen = this.state.navigationOpen;
-      var toggleFooter = this.props.toggleFooter;
-
-      if (!navigationOpen === true) {
-        document.body.classList.add("no-scroll");
-      } else {
-        document.body.classList.remove("no-scroll");
-      }
-
+      var _this$props = this.props,
+          toggleFooter = _this$props.toggleFooter,
+          toggleNavigation = _this$props.toggleNavigation;
       this.setState({
-        navigationOpen: !navigationOpen,
         emailActive: false
       }, function () {
-        return toggleFooter();
+        toggleFooter();
+        toggleNavigation();
       });
     }
   }, {
@@ -40814,11 +40807,12 @@ var Header = /*#__PURE__*/function (_React$PureComponent) {
     value: function handleEmail() {
       var _this2 = this;
 
-      var resetFooter = this.props.resetFooter;
-      document.body.classList.remove("no-scroll");
+      var _this$props2 = this.props,
+          resetFooter = _this$props2.resetFooter,
+          resetNavigation = _this$props2.resetNavigation;
+      resetNavigation();
       resetFooter();
       this.setState({
-        navigationOpen: false,
         emailActive: true
       }, function () {
         $([document.documentElement, document.body]).animate({
@@ -40843,12 +40837,18 @@ var Header = /*#__PURE__*/function (_React$PureComponent) {
     value: function render() {
       var _this3 = this;
 
-      var _navigate = this.props.navigate;
-      var _this$state = this.state,
-          navigationOpen = _this$state.navigationOpen,
-          emailActive = _this$state.emailActive;
+      var _this$props3 = this.props,
+          _navigate = _this$props3.navigate,
+          activeRoute = _this$props3.activeRoute,
+          nextRoute = _this$props3.nextRoute,
+          navigating = _this$props3.navigating,
+          navigationOpen = _this$props3.navigationOpen;
+      var emailActive = this.state.emailActive;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Navigation__WEBPACK_IMPORTED_MODULE_3__["default"], {
         active: navigationOpen,
+        activeRoute: activeRoute,
+        nextRoute: nextRoute,
+        navigating: navigating,
         navigate: function navigate(route) {
           return _navigate(route);
         }
@@ -40858,14 +40858,14 @@ var Header = /*#__PURE__*/function (_React$PureComponent) {
         onClick: function onClick() {
           return _this3.handleEmail();
         },
-        disabled: false
+        disabled: navigating
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_icons_Hamburger__WEBPACK_IMPORTED_MODULE_1__["default"], {
         active: navigationOpen,
         color: emailActive || navigationOpen ? "white" : "red-pink",
         onClick: function onClick() {
           return _this3.handleHamburger();
         },
-        disabled: emailActive
+        disabled: navigating || emailActive
       }));
     }
   }]);
@@ -40934,19 +40934,37 @@ var Navigation = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(Navigation, [{
     key: "handleClick",
     value: function handleClick(event, route) {
-      var navigate = this.props.navigate;
+      var _this$props = this.props,
+          navigate = _this$props.navigate,
+          navigating = _this$props.navigating;
       event.preventDefault();
       event.stopPropagation();
-      navigate(route);
+
+      if (navigating === false) {
+        navigate(route);
+      }
     }
   }, {
     key: "renderNavItem",
-    value: function renderNavItem(route, active) {
+    value: function renderNavItem(route) {
       var _this2 = this;
+
+      var _this$props2 = this.props,
+          nextRoute = _this$props2.nextRoute,
+          navigating = _this$props2.navigating;
+      var classes = "";
+
+      if (nextRoute && navigating === true) {
+        if (route.name === nextRoute.name) {
+          classes = "main";
+        } else {
+          classes = "fade";
+        }
+      }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: route.path,
-        className: "nav-item",
+        className: classes,
         onClick: function onClick(event) {
           return _this2.handleClick(event, route);
         }
@@ -40955,17 +40973,23 @@ var Navigation = /*#__PURE__*/function (_React$PureComponent) {
   }, {
     key: "render",
     value: function render() {
-      var active = this.props.active;
+      var _this$props3 = this.props,
+          active = _this$props3.active,
+          navigating = _this$props3.navigating;
       var classes = "";
 
       if (active === true) {
-        classes = "active";
+        classes += " active";
+      }
+
+      if (navigating === true) {
+        classes += " transition";
       }
 
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-navigation",
         className: classes
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index, false), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].about, false), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].projects, false), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work, false)));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", null, this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].about), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].projects), this.renderNavItem(_constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].work)));
     }
   }]);
 
@@ -41450,9 +41474,14 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
     _this = _super.call(this, props);
     _this.state = {
       activeRoute: _constants_Routes__WEBPACK_IMPORTED_MODULE_1__["Routes"].index,
+      nextRoute: null,
+      navigating: false,
+      navigationOpen: false,
       footerVisible: true
     };
+    _this.handleResetNavigation = _this.handleResetNavigation.bind(_assertThisInitialized(_this));
     _this.handleResetFooter = _this.handleResetFooter.bind(_assertThisInitialized(_this));
+    _this.handleToggleNavigation = _this.handleToggleNavigation.bind(_assertThisInitialized(_this));
     _this.handleToggleFooter = _this.handleToggleFooter.bind(_assertThisInitialized(_this));
     _this.handleNavigation = _this.handleNavigation.bind(_assertThisInitialized(_this));
     _this.renderPage = _this.renderPage.bind(_assertThisInitialized(_this));
@@ -41460,6 +41489,14 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(Navigation, [{
+    key: "handleResetNavigation",
+    value: function handleResetNavigation() {
+      document.body.classList.remove("no-scroll");
+      this.setState({
+        navigationOpen: false
+      });
+    }
+  }, {
     key: "handleResetFooter",
     value: function handleResetFooter() {
       this.setState({
@@ -41475,8 +41512,50 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
       });
     }
   }, {
+    key: "handleToggleNavigation",
+    value: function handleToggleNavigation() {
+      var navigationOpen = this.state.navigationOpen;
+
+      if (!navigationOpen === true) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+
+      this.setState({
+        navigationOpen: !navigationOpen
+      });
+    }
+  }, {
     key: "handleNavigation",
-    value: function handleNavigation(route) {}
+    value: function handleNavigation(route) {
+      var _this2 = this;
+
+      this.setState({
+        nextRoute: route,
+        navigating: true
+      }, function () {
+        setTimeout(function () {
+          // Change the page address
+          window.history.pushState("", route.label, route.path); // Scroll to the top of the page
+
+          window.scrollTo(0, 0);
+
+          _this2.setState({
+            activeRoute: route
+          }, function () {
+            setTimeout(function () {
+              _this2.setState({
+                nextRoute: null,
+                navigating: false
+              }, function () {
+                return _this2.handleResetNavigation();
+              });
+            }, 1000);
+          });
+        }, 500);
+      });
+    }
   }, {
     key: "renderPage",
     value: function renderPage(activeRoute) {
@@ -41498,21 +41577,33 @@ var Navigation = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var _this$state = this.state,
           activeRoute = _this$state.activeRoute,
-          footerVisible = _this$state.footerVisible;
+          footerVisible = _this$state.footerVisible,
+          navigationOpen = _this$state.navigationOpen,
+          navigating = _this$state.navigating,
+          nextRoute = _this$state.nextRoute;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sections_Header__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        navigationOpen: navigationOpen,
         activeRoute: activeRoute,
+        nextRoute: nextRoute,
+        navigating: navigating,
         navigate: function navigate(route) {
-          return _this2.handleNavigation(route);
+          return _this3.handleNavigation(route);
+        },
+        resetNavigation: function resetNavigation() {
+          return _this3.handleResetNavigation();
+        },
+        toggleNavigation: function toggleNavigation() {
+          return _this3.handleToggleNavigation();
         },
         resetFooter: function resetFooter() {
-          return _this2.handleResetFooter();
+          return _this3.handleResetFooter();
         },
         toggleFooter: function toggleFooter() {
-          return _this2.handleToggleFooter();
+          return _this3.handleToggleFooter();
         }
       }), this.renderPage(activeRoute), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_sections_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
         visible: footerVisible

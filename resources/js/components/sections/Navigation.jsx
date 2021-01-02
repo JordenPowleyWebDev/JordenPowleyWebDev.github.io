@@ -10,35 +10,52 @@ export default class Navigation extends React.PureComponent {
     }
 
     handleClick(event, route) {
-        const { navigate } = this.props;
+        const { navigate, navigating } = this.props;
 
         event.preventDefault();
         event.stopPropagation();
 
-        navigate(route);
+        if (navigating === false) {
+            navigate(route);
+        }
     }
 
-    renderNavItem(route, active) {
+    renderNavItem(route) {
+        const { nextRoute, navigating } = this.props;
+
+        let classes = "";
+        if (nextRoute && navigating === true) {
+            if (route.name === nextRoute.name) {
+                classes = "main";
+            } else {
+                classes = "fade";
+            }
+        }
+
         return (
-            <a href={route.path} className="nav-item" onClick={(event) => this.handleClick(event, route)}>{route.label}</a>
+            <a href={route.path} className={classes} onClick={(event) => this.handleClick(event, route)}>{route.label}</a>
         );
     }
 
     render() {
-        const { active } = this.props;
+        const { active, navigating } = this.props;
 
         let classes = "";
         if (active === true) {
-            classes = "active";
+            classes += " active";
+        }
+
+        if (navigating === true) {
+            classes += " transition";
         }
 
         return (
             <div id="main-navigation" className={classes}>
                 <nav>
-                    {this.renderNavItem(Routes.index, false)}
-                    {this.renderNavItem(Routes.about, false)}
-                    {this.renderNavItem(Routes.projects, false)}
-                    {this.renderNavItem(Routes.work, false)}
+                    {this.renderNavItem(Routes.index)}
+                    {this.renderNavItem(Routes.about)}
+                    {this.renderNavItem(Routes.projects)}
+                    {this.renderNavItem(Routes.work)}
                 </nav>
             </div>
         );

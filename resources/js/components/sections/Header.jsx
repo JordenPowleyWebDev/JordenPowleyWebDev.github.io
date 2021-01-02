@@ -8,7 +8,6 @@ export default class Header extends React.PureComponent {
         super(props);
 
         this.state = {
-            navigationOpen: false,
             emailActive:    false,
         };
 
@@ -17,29 +16,23 @@ export default class Header extends React.PureComponent {
     }
 
     handleHamburger() {
-        const { navigationOpen } = this.state;
-        const { toggleFooter } = this.props;
-
-        if (!navigationOpen === true) {
-            document.body.classList.add("no-scroll");
-        } else {
-            document.body.classList.remove("no-scroll");
-        }
+        const { toggleFooter, toggleNavigation } = this.props;
 
         this.setState({
-            navigationOpen: !navigationOpen,
             emailActive:    false,
-        }, () => toggleFooter());
+        }, () => {
+            toggleFooter();
+            toggleNavigation();
+        });
     }
 
     handleEmail() {
-        const { resetFooter } = this.props;
+        const { resetFooter, resetNavigation } = this.props;
 
-        document.body.classList.remove("no-scroll");
+        resetNavigation();
         resetFooter();
 
         this.setState({
-            navigationOpen: false,
             emailActive:    true,
         }, () => {
             $([document.documentElement, document.body]).animate({
@@ -57,26 +50,29 @@ export default class Header extends React.PureComponent {
     }
 
     render() {
-        const { navigate } = this.props;
-        const { navigationOpen, emailActive } = this.state;
+        const { navigate, activeRoute, nextRoute, navigating, navigationOpen } = this.props;
+        const { emailActive } = this.state;
 
         return (
             <header>
                 <Navigation
                     active={navigationOpen}
+                    activeRoute={activeRoute}
+                    nextRoute={nextRoute}
+                    navigating={navigating}
                     navigate={(route) => navigate(route)}
                 />
                 <Email
                     active={emailActive}
                     color={emailActive || navigationOpen ? "white" : "red-pink"}
                     onClick={() => this.handleEmail()}
-                    disabled={false}
+                    disabled={navigating}
                 />
                 <Hamburger
                     active={navigationOpen}
                     color={emailActive || navigationOpen ? "white" : "red-pink"}
                     onClick={() => this.handleHamburger()}
-                    disabled={emailActive}
+                    disabled={navigating || emailActive}
                 />
             </header>
         );
