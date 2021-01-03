@@ -31,11 +31,11 @@ export default class Projects extends React.PureComponent {
                                         Heightworks
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-react mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-app-store mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-google-play mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-laravel mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-php"} />
+                                        <Icon title={"React Native"} className={"fab fa-react mr-2 mr-md-3"} />
+                                        <Icon title={"Apple App Store"} className={"fab fa-app-store mr-2 mr-md-3"} />
+                                        <Icon title={"Google Play Store"} className={"fab fa-google-play mr-2 mr-md-3"} />
+                                        <Icon title={"Laravel"} className={"fab fa-laravel mr-2 mr-md-3"} />
+                                        <Icon title={"PHP"} className={"fab fa-php"} />
                                     </div>
                                 </div>
                             </Title>
@@ -53,10 +53,11 @@ export default class Projects extends React.PureComponent {
                                         Entrego
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-laravel mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-php mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-bootstrap mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-react"} />
+                                        <Icon title={"Laravel"} className={"fab fa-laravel mr-2 mr-md-3"} />
+                                        <Icon title={"Stripe"} className={"fab fa-stripe mr-2 mr-md-3"} />
+                                        <Icon title={"PHP"} className={"fab fa-php mr-2 mr-md-3"} />
+                                        <Icon title={"Bootstrap 4"} className={"fab fa-bootstrap mr-2 mr-md-3"} />
+                                        <Icon title={"React"} className={"fab fa-react"} />
                                     </div>
                                 </div>
                             </Title>
@@ -74,9 +75,9 @@ export default class Projects extends React.PureComponent {
                                         Expeditious Services
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-laravel mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-php mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-react"} />
+                                        <Icon title={"Laravel"} className={"fab fa-laravel mr-2 mr-md-3"} />
+                                        <Icon title={"PHP"} className={"fab fa-php mr-2 mr-md-3"} />
+                                        <Icon title={"React"} className={"fab fa-react"} />
                                     </div>
                                 </div>
                             </Title>
@@ -94,8 +95,9 @@ export default class Projects extends React.PureComponent {
                                         Penny Hydraulics
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-laravel mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-php"} />
+                                        <Icon title={"Laravel"} className={"fab fa-laravel mr-2 mr-md-3"} />
+                                        <Icon title={"PHP"} className={"fab fa-php mr-2 mr-md-3"} />
+                                        <Icon title={"Bootstrap 4"} className={"fab fa-bootstrap"} />
                                     </div>
                                 </div>
                             </Title>
@@ -117,7 +119,8 @@ export default class Projects extends React.PureComponent {
                                         Divine Chocolate
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-php"} />
+                                        <Icon title={"PHP - Craft CMS"} className={"fab fa-php mr-2 mr-md-3"} />
+                                        <Icon title={"Bootstrap 4"} className={"fab fa-bootstrap"} />
                                     </div>
                                 </div>
                             </Title>
@@ -135,11 +138,11 @@ export default class Projects extends React.PureComponent {
                                         Project Migrations
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-php mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-symfony mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-wordpress mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-docker mr-2 mr-md-3"} />
-                                        <Icon className={"fab fa-bitbucket"} />
+                                        <Icon title={"PHP"} className={"fab fa-php mr-2 mr-md-3"} />
+                                        <Icon title={"Symfony"} className={"fab fa-symfony mr-2 mr-md-3"} />
+                                        <Icon title={"Wordpress"} className={"fab fa-wordpress mr-2 mr-md-3"} />
+                                        <Icon title={"Docker"} className={"fab fa-docker mr-2 mr-md-3"} />
+                                        <Icon title={"Bitbucket Pipelines"} className={"fab fa-bitbucket"} />
                                     </div>
                                 </div>
                             </Title>
@@ -157,7 +160,7 @@ export default class Projects extends React.PureComponent {
                                         New World Trading<br />Gift Card System
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-php"} />
+                                        <Icon title={"PHP"} className={"fab fa-php "} />
                                     </div>
                                 </div>
                             </Title>
@@ -175,8 +178,8 @@ export default class Projects extends React.PureComponent {
                                         Email Marketing
                                     </div>
                                     <div className="col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center">
-                                        <Icon className={"fab fa-html5 mr-2 mr-md-3"} />
-                                        <Icon className={"fas fa-at"} />
+                                        <Icon title={"HTML"} className={"fab fa-html5 mr-2 mr-md-3"} />
+                                        <Icon title={"In House ECRM Solution"} className={"fas fa-at"} />
                                     </div>
                                 </div>
                             </Title>

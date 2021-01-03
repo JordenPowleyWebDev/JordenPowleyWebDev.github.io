@@ -41085,9 +41085,13 @@ var Icon = /*#__PURE__*/function (_React$PureComponent) {
   _createClass(Icon, [{
     key: "render",
     value: function render() {
-      var className = this.props.className;
+      var _this$props = this.props,
+          className = _this$props.className,
+          _this$props$title = _this$props.title,
+          title = _this$props$title === void 0 ? "" : _this$props$title;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "text-white " + className
+        className: "text-white " + className,
+        title: title
       });
     }
   }]);
@@ -41816,14 +41820,19 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Heightworks"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "React Native",
         className: "fab fa-react mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Apple App Store",
         className: "fab fa-app-store mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Google Play Store",
         className: "fab fa-google-play mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Laravel",
         className: "fab fa-laravel mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "PHP",
         className: "fab fa-php"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Langley Foxall"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-end"
@@ -41838,12 +41847,19 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Entrego"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Laravel",
         className: "fab fa-laravel mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Stripe",
+        className: "fab fa-stripe mr-2 mr-md-3"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "PHP",
         className: "fab fa-php mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Bootstrap 4",
         className: "fab fa-bootstrap mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "React",
         className: "fab fa-react"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Langley Foxall"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-start"
@@ -41858,10 +41874,13 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Expeditious Services"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Laravel",
         className: "fab fa-laravel mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "PHP",
         className: "fab fa-php mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "React",
         className: "fab fa-react"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Langley Foxall"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-end"
@@ -41876,9 +41895,14 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Penny Hydraulics"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Laravel",
         className: "fab fa-laravel mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        className: "fab fa-php"
+        title: "PHP",
+        className: "fab fa-php mr-2 mr-md-3"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Bootstrap 4",
+        className: "fab fa-bootstrap"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Langley Foxall"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
         className: "border-dark-blue"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -41898,7 +41922,11 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Divine Chocolate"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        className: "fab fa-php"
+        title: "PHP - Craft CMS",
+        className: "fab fa-php mr-2 mr-md-3"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Bootstrap 4",
+        className: "fab fa-bootstrap"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Together"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-end"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -41912,14 +41940,19 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Project Migrations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "PHP",
         className: "fab fa-php mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Symfony",
         className: "fab fa-symfony mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Wordpress",
         className: "fab fa-wordpress mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Docker",
         className: "fab fa-docker mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "Bitbucket Pipelines",
         className: "fab fa-bitbucket"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Together"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-start"
@@ -41934,7 +41967,8 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "New World Trading", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Gift Card System"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        className: "fab fa-php"
+        title: "PHP",
+        className: "fab fa-php "
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Zonal Marketing Technologies"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row m-0 p-0 justify-content-end"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -41948,8 +41982,10 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
       }, "Email Marketing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "HTML",
         className: "fab fa-html5 mr-2 mr-md-3"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        title: "In House ECRM Solution",
         className: "fas fa-at"
       })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], null, "Zonal Marketing Technologies"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.")))));
     }

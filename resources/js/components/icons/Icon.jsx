@@ -6,10 +6,10 @@ export default class Icon extends React.PureComponent {
     }
 
     render() {
-        const { className } = this.props;
+        const { className, title = "" } = this.props;
 
         return (
-            <i className={"text-white "+className}></i>
+            <i className={"text-white "+className} title={title} />
         );
     }
 }
