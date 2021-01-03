@@ -6,10 +6,17 @@ export default class Title extends React.PureComponent {
     }
 
     render() {
-        const { children } = this.props;
+        const { children, noMargin = false } = this.props;
+
+        let classes = "h3 text-white no-select";
+        if (noMargin === false) {
+            classes += " mb-3 mb-md-4"
+        } else {
+            classes += " m-0"
+        }
 
         return (
-            <h2 className={"h3 mb-3 mb-md-4 text-white no-select"}>
+            <h2 className={classes}>
                 {children}
             </h2>
         );

@@ -6,7 +6,7 @@ export default class Divider extends React.PureComponent {
     }
 
     render() {
-        const { className = "border-red-pink" } = this.props;
+        const {className = "border-red-pink" } = this.props;
 
         return (
             <div className={"m-0 my-4 my-md-5 border-bottom "+className} />

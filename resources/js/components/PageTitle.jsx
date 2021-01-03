@@ -6,10 +6,10 @@ export default class PageTitle extends React.PureComponent {
     }
 
     render() {
-        const { children } = this.props;
+        const { children, align = "left" } = this.props;
 
         return (
-            <h1 className={"text-white no-select"}>
+            <h1 className={"text-white no-select text-"+align}>
                 {children}
             </h1>
         );

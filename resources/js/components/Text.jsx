@@ -6,10 +6,10 @@ export default class Text extends React.PureComponent {
     }
 
     render() {
-        const { children } = this.props;
+        const { children, className = "" } = this.props;
 
         return (
-            <p className={"text-white no-select"}>
+            <p className={"text-white no-select "+className}>
                 {children}
             </p>
         );
