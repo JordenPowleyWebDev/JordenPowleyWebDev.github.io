@@ -17206,12 +17206,6 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 767.98px) {
-  header {
-    position: relative;
-  }
-}
-
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -17228,6 +17222,12 @@ header {
   display: block;
   position: relative;
   overflow-x: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .page {
+    padding-top: 70px !important;
+  }
 }
 
 .gradient-background {
