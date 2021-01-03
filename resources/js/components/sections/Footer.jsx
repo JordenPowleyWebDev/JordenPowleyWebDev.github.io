@@ -30,18 +30,30 @@ export default class Footer extends React.PureComponent {
                 <div className="row m-0 p-0">
                     <div className="col m-0 p-0 p-md-4 pt-0">
                         <h4 className="h5 mb-4 mb-md-5 text-white no-select">Get In Touch</h4>
-                        <a className="d-block position-relative mb-3 text-white"
-                           href="mailto:jorden.powley.webdev@gmail.com"
-                        >
-                            <i className="far fa-envelope fa-fw mr-2 mr-md-3"></i>
-                            <span>jorden.powley.webdev@gmail.com</span>
-                        </a>
-                        <a className="d-block position-relative mb-4 mb-md-5 text-white"
-                           href="tel:+447446899186"
-                        >
-                            <i className="fas fa-mobile-alt fa-fw mr-2 mr-md-3"></i>
-                            <span>07446 899186</span>
-                        </a>
+                        <div className={"mb-3"}>
+                            <a className="text-white"
+                               href="mailto:jorden.powley.webdev@gmail.com"
+                            >
+                                <i className="far fa-envelope fa-fw mr-2 mr-md-3"></i>
+                                <span>jorden.powley.webdev@gmail.com</span>
+                            </a>
+                        </div>
+                        <div className={"mb-3"}>
+                            <a className="text-white"
+                               href="tel:+447446899186"
+                            >
+                                <i className="fas fa-mobile-alt fa-fw mr-2 mr-md-3"></i>
+                                <span>07446 899186</span>
+                            </a>
+                        </div>
+                        <div className={"mb-4 mb-md-5"}>
+                            <a className="text-white"
+                               href="https://github.com/JordenPowleyWebDev"
+                            >
+                                <i className="fab fa-github fa-fw mr-2 mr-md-3"></i>
+                                <span>JordenPowleyWebDev</span>
+                            </a>
+                        </div>
                         <div className={"w-100 border-bottom border-white"}></div>
                     </div>
                 </div>
