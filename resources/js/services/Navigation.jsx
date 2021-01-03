@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactGA from 'react-ga';
 import {Routes} from "../constants/Routes";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
@@ -33,6 +34,8 @@ export default class Navigation extends React.Component {
         this.handleToggleNavigation = this.handleToggleNavigation.bind(this);
         this.handleToggleFooter     = this.handleToggleFooter.bind(this);
         this.handleNavigation       = this.handleNavigation.bind(this);
+
+        ReactGA.initialize('UA-128341357-1');
     }
 
     handleResetNavigation() {
@@ -79,6 +82,7 @@ export default class Navigation extends React.Component {
             setTimeout(() => {
                 // Change the page address
                 window.history.pushState("", route.label, route.path);
+                ReactGA.pageview(route.path, null, route.label)
 
                 // Scroll to the top of the page
                 window.scrollTo(0, 0);

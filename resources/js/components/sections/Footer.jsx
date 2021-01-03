@@ -1,10 +1,12 @@
 import React from 'react';
+import ReactGA from "react-ga";
 
 export default class Footer extends React.PureComponent {
     constructor(props) {
         super(props);
 
-        this.handleScrollTop = this.handleScrollTop.bind(this);
+        this.handleScrollTop    = this.handleScrollTop.bind(this);
+        this.handleClick        = this.handleClick.bind(this);
     }
 
     handleScrollTop(event) {
@@ -15,6 +17,10 @@ export default class Footer extends React.PureComponent {
         }, {
             duration: 500,
         });
+    }
+
+    handleClick(event, tracking) {
+        ReactGA.pageview(tracking, null, tracking);
     }
 
     render() {
@@ -31,24 +37,28 @@ export default class Footer extends React.PureComponent {
                     <div className="col m-0 p-0 p-md-4 pt-0">
                         <h4 className="h5 mb-4 mb-md-5 text-white no-select">Get In Touch</h4>
                         <div className={"mb-3"}>
-                            <a className="text-white"
-                               href="mailto:jorden.powley.webdev@gmail.com"
+                            <a className="text-white cursor-pointer"
+                               href={"mailto:jorden.powley.webdev@gmail.com"}
+                               onClick={(event) => this.handleClick(event, "/contact/email")}
                             >
                                 <i className="far fa-envelope fa-fw mr-2 mr-md-3"></i>
                                 <span>jorden.powley.webdev@gmail.com</span>
                             </a>
                         </div>
                         <div className={"mb-3"}>
-                            <a className="text-white"
-                               href="tel:+447446899186"
+                            <a className="text-white cursor-pointer"
+                               href={"tel:+447446899186"}
+                               onClick={(event) => this.handleClick(event, "/contact/mobile")}
                             >
                                 <i className="fas fa-mobile-alt fa-fw mr-2 mr-md-3"></i>
                                 <span>07446 899186</span>
                             </a>
                         </div>
                         <div className={"mb-4 mb-md-5"}>
-                            <a className="text-white"
-                               href="https://github.com/JordenPowleyWebDev"
+                            <a className="text-white cursor-pointer"
+                               href={"https://github.com/JordenPowleyWebDev"}
+                               target="_blank"
+                               onClick={(event) => this.handleClick(event, "/contact/github")}
                             >
                                 <i className="fab fa-github fa-fw mr-2 mr-md-3"></i>
                                 <span>JordenPowleyWebDev</span>
