@@ -174,7 +174,7 @@ export default class Projects extends React.PureComponent {
                             icon:   "fab fa-php"
                         },
                     ], [
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "This ",
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                     ])}
                     <Divider />
@@ -187,8 +187,9 @@ export default class Projects extends React.PureComponent {
                             icon:   "fas fa-at"
                         },
                     ], [
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        "This involved building the initial HTML email templates to be used within an in-house ECRM solution. The ECRM solution in questions was used by hospitality giants such as Stonegate and Mitchell & Butlers.",
+                        "Templates and email components were built and tested by myself, so that clients using the software could build and send their own marketing communications.",
+                        "The main difficulty with these projects was translating modern designs into functionality HTMl emails that would render as expected in non-standardised email browsers.",
                     ])}
                 </div>
             </Page>
