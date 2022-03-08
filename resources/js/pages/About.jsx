@@ -33,7 +33,7 @@ export default class About extends React.PureComponent {
                             <Title>Doesn't work 100% of the time</Title>
                             <Text>Being an ever evolving individual, verbose way of saying 'short attention span', my hobbies reflect this.</Text>
                             <Text>Currently these include kayaking down the rough waves of the Regent's canal (weather dependent), running, mediocre djing and repairing my (inflatable) kayak.</Text>
-                            <Text className={"mb-0"}>Being relatively new to London, I'm on the lookup for random London based activities. So far I've found a cricket alternative to bowling, shuffleboard and a very high tech crazy golf. Suggestions are always accepted...</Text>
+                            <Text className={"mb-0"}>Being relatively new to London, I'm on the lookout for random London based activities. So far I've found a cricket alternative to bowling, shuffleboard and a very high tech crazy golf. Suggestions are always accepted...</Text>
                         </div>
                     </div>
                     <Divider />

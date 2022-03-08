@@ -1505,7 +1505,7 @@ var About = /*#__PURE__*/function (_React$PureComponent) {
                 children: "Currently these include kayaking down the rough waves of the Regent's canal (weather dependent), running, mediocre djing and repairing my (inflatable) kayak."
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Text__WEBPACK_IMPORTED_MODULE_6__["default"], {
                 className: "mb-0",
-                children: "Being relatively new to London, I'm on the lookup for random London based activities. So far I've found a cricket alternative to bowling, shuffleboard and a very high tech crazy golf. Suggestions are always accepted..."
+                children: "Being relatively new to London, I'm on the lookout for random London based activities. So far I've found a cricket alternative to bowling, shuffleboard and a very high tech crazy golf. Suggestions are always accepted..."
               })]
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {})]
