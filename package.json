@@ -12,11 +12,11 @@
   "dependencies": {
     "@babel/preset-react": "^7.10.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "axios": "^0.19",
+    "axios": "^0.26.0",
     "bootstrap": "^4.5.0",
     "cross-env": "^7.0",
     "jquery": "^3.5.1",
-    "laravel-mix": "^5.0.1",
+    "laravel-mix": "^6.0.43",
     "lodash": "^4.17.13",
     "popper.js": "^1.12",
     "prop-types": "^15.7.2",
