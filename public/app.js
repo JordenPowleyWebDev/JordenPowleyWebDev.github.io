@@ -1593,41 +1593,47 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
     key: "renderRow",
     value: function renderRow(side, project, owner, icons, paragraphs) {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-        className: side === "left" ? "row m-0 p-0 justify-content-start" : "row m-0 p-0 justify-content-end",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-          className: "col-12 col-md-10 col-xl-8 m-0 p-0",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Title__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            noMargin: true,
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
-              className: "row m-0 p-0",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0",
-                dangerouslySetInnerHTML: {
-                  __html: project
-                }
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
-                className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center",
-                children: !!icons && icons.map(function (icon, index) {
-                  var classes = icon.icon;
-
-                  if (index + 1 !== icons.length) {
-                    classes = classes + " mr-2 mr-md-3";
+        className: "d-flex justify-content-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+          className: side === "left" ? "row m-0 p-0 justify-content-start" : "row m-0 p-0 justify-content-end",
+          style: {
+            maxWidth: "1200px"
+          },
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+            className: "col-12 col-md-10 col-xl-8 m-0 p-0",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Title__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              noMargin: true,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+                className: "row m-0 p-0",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+                  className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0",
+                  dangerouslySetInnerHTML: {
+                    __html: project
                   }
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+                  className: "col-12 col-md-6 m-0 mb-2 mb-md-0 p-0 d-flex justify-content-md-end align-items-center align-content-center",
+                  children: !!icons && icons.map(function (icon, index) {
+                    var classes = icon.icon;
 
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
-                    title: icon.title,
-                    className: classes
-                  }, index);
-                })
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], {
-            children: owner
-          }), !!paragraphs && paragraphs.map(function (item, index) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], {
-              children: item
-            }, index);
-          })]
+                    if (index + 1 !== icons.length) {
+                      classes = classes + " mr-2 mr-md-3";
+                    }
+
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_icons_Icon__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                      title: icon.title,
+                      className: classes
+                    }, index);
+                  })
+                })]
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Label__WEBPACK_IMPORTED_MODULE_8__["default"], {
+              children: owner
+            }), !!paragraphs && paragraphs.map(function (item, index) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Text__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                children: item
+              }, index);
+            })]
+          })
         })
       });
     }
@@ -1642,22 +1648,89 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
             align: "center",
             children: "Current Projects"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "Heightworks", "Langley Foxall", [{
-            title: "React Native",
-            icon: "fab fa-react"
-          }, {
-            title: "Apple App Store",
-            icon: "fab fa-app-store"
-          }, {
-            title: "Google Play Store",
-            icon: "fab fa-google-play"
-          }, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "EH Joinery", "Langley Foxall", [{
             title: "Laravel",
             icon: "fab fa-laravel"
           }, {
             title: "PHP",
             icon: "fab fa-php"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Entrego", "Langley Foxall", [{
+          }, {
+            title: "Bootstrap 4",
+            icon: "fab fa-bootstrap"
+          }, {
+            title: "React",
+            icon: "fab fa-react"
+          }, {
+            title: "Generates PDF's",
+            icon: "fab fa-file-pdf"
+          }], ["This is the latest project I have worked on, involving building a bespoke Order Management System.", "The main functionality is built using Laravel with large portions of the site built using React following a DRY approach.", "An companion React Native (Expo) has been built for their staff to management their workload remotely, syncing the data back to the server seamlessly."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Goldilock", "Langley Foxall", [{
+            title: "Laravel",
+            icon: "fab fa-laravel"
+          }, {
+            title: "Minio",
+            icon: "fab fa-aws"
+          }, {
+            title: "PHP",
+            icon: "fab fa-php"
+          }, {
+            title: "Bootstrap 4",
+            icon: "fab fa-bootstrap"
+          }, {
+            title: "React",
+            icon: "fab fa-react"
+          }], ["The clients are specialists in server security & hardware and had created a unique storage server system where the drives could physically be disconnected from the internet via an automated mechanism.", "Working closely with the client, we built a bespoke frontend for this storage system to facilitate a user uploading files & managing files."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            className: "border-dark-blue"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            className: "border-dark-blue"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            align: "center",
+            children: "Previous Projects"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "CicloZone", "Langley Foxall", [{
+            title: "Laravel",
+            icon: "fab fa-laravel"
+          }, {
+            title: "Stripe",
+            icon: "fab fa-stripe"
+          }, {
+            title: "Apple App Store",
+            icon: "fab fa-app-store-ios"
+          }, {
+            title: "Google Play",
+            icon: "fab fa-google-play"
+          }, {
+            title: "PHP",
+            icon: "fab fa-php"
+          }, {
+            title: "Bootstrap 4",
+            icon: "fab fa-bootstrap"
+          }, {
+            title: "React",
+            icon: "fab fa-react"
+          }], ["CicloZone is an ambitious project aimed at cycling and fitness enthusiasts, consisting of multiple sites and multiple mobile applications.", "The main system is built using Laravel with any bespoke frontend work built in React. Both apps were built initially using Expo but were subsequently ejected when 3rd party packages were required for bluetooth & in-app subscriptions.", "This system also involves a localized subscription system built using Stripe."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Expeditious Services", "Langley Foxall", [{
+            title: "Laravel",
+            icon: "fab fa-laravel"
+          }, {
+            title: "PHP",
+            icon: "fab fa-php"
+          }, {
+            title: "Bootstrap 4",
+            icon: "fab fa-bootstrap"
+          }, {
+            title: "React",
+            icon: "fab fa-react"
+          }], ["Expeditious Services required a bespoke system to manage contact between them and their clients as well as managing their staff's schedules & reporting.", "Laravel and React make up the bulk of the system, with operators having access to an off-market app which assists them with their day-to-day duties."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "Penny Hydraulics (OMS)", "Langley Foxall", [{
+            title: "Laravel",
+            icon: "fab fa-laravel"
+          }, {
+            title: "PHP",
+            icon: "fab fa-php"
+          }, {
+            title: "Bootstrap 4",
+            icon: "fab fa-bootstrap"
+          }, {
+            title: "React",
+            icon: "fab fa-react"
+          }], ["Penny Hydraulics needed a new order management system building so that they could move away from the paper based system they were using.", "This system syncs to ProspectSoft where Penny Hydraulics manage their sales pipeline."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Entrego", "Langley Foxall", [{
             title: "Laravel",
             icon: "fab fa-laravel"
           }, {
@@ -1672,38 +1745,13 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
           }, {
             title: "React",
             icon: "fab fa-react"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "Expeditious Services", "Langley Foxall", [{
-            title: "Laravel",
-            icon: "fab fa-laravel"
-          }, {
-            title: "PHP",
-            icon: "fab fa-php"
-          }, {
-            title: "React",
-            icon: "fab fa-react"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Penny Hydraulics", "Langley Foxall", [{
-            title: "Laravel",
-            icon: "fab fa-laravel"
-          }, {
-            title: "PHP",
-            icon: "fab fa-php"
-          }, {
-            title: "React",
-            icon: "fab fa-react"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            className: "border-dark-blue"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            className: "border-dark-blue"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_PageTitle__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            align: "center",
-            children: "Previous Projects"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "Divine Chocolate", "Together", [{
+          }], ["Entrego is a platform for smaller companies to manage deliveries and their delivery drivers.", "A Xero integration is used to retrieve invoices and create deliveries from the line items. These deliveries can then be scheduled to individual drivers.", "This platform requires a subscription which was built in using Stripe and includes subscription seats.", "The drivers using this platform have access to an iOS and Google Play appm where they can see and manage today's deliveries."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "Divine Chocolate", "Together", [{
             title: "PHP - Craft CMS",
             icon: "fab fa-php"
           }, {
             title: "Bootstrap 4",
             icon: "fab fa-bootstrap"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Project Migrations", "Together", [{
+          }], ["This was a bespoke marketing site build for Divine Chocolate UK. This system was built using Craft CMS, based on designs provided by the in-house design team."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Project Migrations", "Together", [{
             title: "PHP",
             icon: "fab fa-php"
           }, {
@@ -1718,10 +1766,10 @@ var Projects = /*#__PURE__*/function (_React$PureComponent) {
           }, {
             title: "Bitbucket Pipelines",
             icon: "fab fa-bitbucket"
-          }], ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "New World Trading<br />Gift Card System", "Zonal", [{
+          }], ["This involved migrating legacy sites along with recently acquired client websites so that they were optimised for Bitbucket Pipelines and Amazon ECS servers running Docker."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("left", "NWTC Gift Card System", "Zonal", [{
             title: "PHP",
             icon: "fab fa-php"
-          }], ["This ", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Email Marketing", "Zonal", [{
+          }], ["This was a bespoke gift card solution built for New World Trading Company. It utilised Secure Trading to take payments for the Gift Cards."]), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_Divider__WEBPACK_IMPORTED_MODULE_4__["default"], {}), this.renderRow("right", "Email Marketing", "Zonal", [{
             title: "HTML",
             icon: "fab fa-html5"
           }, {
