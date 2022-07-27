@@ -45,15 +45,6 @@ export default class Footer extends React.PureComponent {
                                 <span>jorden.powley.webdev@gmail.com</span>
                             </a>
                         </div>
-                        <div className={"mb-3"}>
-                            <a className="text-white cursor-pointer"
-                               href={"tel:+447446899186"}
-                               onClick={(event) => this.handleClick(event, "/contact/mobile")}
-                            >
-                                <i className="fas fa-mobile-alt fa-fw mr-2 mr-md-3"></i>
-                                <span>07446 899186</span>
-                            </a>
-                        </div>
                         <div className={"mb-4 mb-md-5"}>
                             <a className="text-white cursor-pointer"
                                href={"https://github.com/JordenPowleyWebDev"}

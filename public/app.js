@@ -916,20 +916,6 @@ var Footer = /*#__PURE__*/function (_React$PureComponent) {
                 })]
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "mb-3",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
-                className: "text-white cursor-pointer",
-                href: "tel:+447446899186",
-                onClick: function onClick(event) {
-                  return _this2.handleClick(event, "/contact/mobile");
-                },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("i", {
-                  className: "fas fa-mobile-alt fa-fw mr-2 mr-md-3"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-                  children: "07446 899186"
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               className: "mb-4 mb-md-5",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
                 className: "text-white cursor-pointer",
